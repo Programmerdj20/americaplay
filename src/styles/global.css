@@ -678,3 +678,18 @@ html {
 	align-items: center;
 	justify-content: center;
 }
+
+/* ==============================================
+   HERO IMAGE RESPONSIVE
+   ============================================== */
+
+/* Ajustar posición de la imagen en responsive para mostrar mejor el personaje */
+.hero-image-responsive img {
+	object-position: center center;
+}
+
+@media (max-width: 768px) {
+	.hero-image-responsive img {
+		object-position: 60% center;
+	}
+}
