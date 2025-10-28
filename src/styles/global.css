@@ -1,0 +1,680 @@
+@import "tailwindcss";
+@import "./colors.css";
+
+/* ==============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================== */
+
+/* Smooth scroll behavior */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Optimized for GPU acceleration */
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Will-change for frequently animated elements */
+.btn-primary,
+.btn-secondary,
+.value-card,
+.pricing-card,
+.feature-box {
+	will-change: transform;
+}
+
+/* ==============================================
+   NAVIGATION
+   ============================================== */
+
+/* Nav scrolled state - optimized without backdrop-blur */
+.nav-scrolled {
+	background-color: rgba(10, 22, 40, 0.98);
+	box-shadow: 0 4px 6px -1px rgba(0, 217, 255, 0.1);
+}
+
+.nav-link {
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 500;
+	transition: color 0.2s ease;
+	position: relative;
+}
+
+.nav-link:hover {
+	color: var(--color-primary-300);
+}
+
+.nav-link-active {
+	color: var(--color-primary-400);
+}
+
+.nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--color-primary-500);
+	transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+	width: 100%;
+}
+
+.nav-link-highlight {
+	padding: 0.5rem 1rem;
+	border-radius: 9999px;
+	border: 1px solid var(--color-secondary-400);
+	color: var(--color-secondary-400);
+	font-weight: 600;
+	transition: background-color 0.2s ease;
+}
+
+.nav-link-highlight:hover {
+	background-color: rgba(251, 191, 36, 0.1);
+}
+
+.nav-link-highlight-active {
+	background-color: rgba(251, 191, 36, 0.2);
+}
+
+/* ==============================================
+   BUTTONS
+   ============================================== */
+
+.btn-primary {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: 9999px;
+	font-weight: 700;
+	font-size: 1.125rem;
+	color: var(--color-dark-900);
+	background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
+	transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+	background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-700));
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.5);
+}
+
+.btn-secondary {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: 9999px;
+	font-weight: 700;
+	font-size: 1.125rem;
+	border: 2px solid var(--color-secondary-400);
+	color: var(--color-secondary-400);
+	background-color: transparent;
+	transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+	background-color: var(--color-secondary-400);
+	color: var(--color-dark-900);
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px -5px rgba(251, 191, 36, 0.5);
+}
+
+.btn-primary-nav,
+.btn-secondary-nav {
+	padding: 0.625rem 1.5rem;
+	border-radius: 9999px;
+	font-weight: 700;
+	transition: all 0.2s ease;
+}
+
+.btn-primary-nav {
+	color: var(--color-dark-900);
+	background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
+}
+
+.btn-primary-nav:hover {
+	background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-700));
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(6, 182, 212, 0.5);
+}
+
+.btn-secondary-nav {
+	border: 1px solid var(--color-primary-500);
+	color: var(--color-primary-400);
+	background-color: transparent;
+}
+
+.btn-secondary-nav:hover {
+	background-color: rgba(6, 182, 212, 0.1);
+}
+
+/* ==============================================
+   MOBILE MENU
+   ============================================== */
+
+.mobile-nav-link {
+	display: block;
+	padding: 0.75rem 1rem;
+	border-radius: 0.5rem;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 500;
+	transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+	background-color: rgba(6, 182, 212, 0.1);
+	color: var(--color-primary-300);
+}
+
+.mobile-nav-link-highlight {
+	display: block;
+	padding: 0.75rem 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--color-secondary-400);
+	color: var(--color-secondary-400);
+	font-weight: 600;
+	text-align: center;
+	transition: all 0.2s ease;
+}
+
+.mobile-nav-link-highlight:hover {
+	background-color: rgba(251, 191, 36, 0.1);
+}
+
+/* Mobile drawer slide animation - controlled via Tailwind classes */
+
+/* ==============================================
+   CARDS
+   ============================================== */
+
+.value-card {
+	background-color: rgba(30, 41, 59, 0.6);
+	border: 1px solid rgba(6, 182, 212, 0.1);
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	transition: all 0.3s ease;
+}
+
+.value-card:hover {
+	transform: translateY(-8px);
+	border-color: var(--color-primary-500);
+	box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+}
+
+.value-icon {
+	width: 5rem;
+	height: 5rem;
+	background: linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-600));
+	border-radius: 9999px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1rem;
+}
+
+/* ==============================================
+   HERO BANNER
+   ============================================== */
+
+/* Hero Banner Desktop */
+.hero-banner-wrapper {
+	position: relative;
+	max-width: 550px;
+	animation: hero-float 4s ease-in-out infinite;
+}
+
+.hero-banner {
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+	box-shadow:
+		0 0 40px rgba(6, 182, 212, 0.3),
+		0 0 80px rgba(6, 182, 212, 0.2),
+		0 25px 50px -12px rgba(0, 0, 0, 0.5);
+	border: 2px solid rgba(6, 182, 212, 0.2);
+	transition: all 0.4s ease;
+}
+
+.hero-banner:hover {
+	transform: scale(1.02);
+	box-shadow:
+		0 0 60px rgba(6, 182, 212, 0.4),
+		0 0 100px rgba(6, 182, 212, 0.3),
+		0 30px 60px -15px rgba(0, 0, 0, 0.6);
+	border-color: rgba(6, 182, 212, 0.4);
+}
+
+/* Hero Banner Mobile - Compact */
+.hero-banner-mobile-wrapper {
+	position: relative;
+	max-width: 350px;
+	margin: 0 auto;
+}
+
+.hero-banner-mobile {
+	width: 100%;
+	height: auto;
+	border-radius: 0.75rem;
+	box-shadow:
+		0 0 30px rgba(6, 182, 212, 0.25),
+		0 20px 40px -12px rgba(0, 0, 0, 0.4);
+	border: 1.5px solid rgba(6, 182, 212, 0.2);
+}
+
+/* Smooth floating animation for hero banner */
+@keyframes hero-float {
+	0%, 100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+/* ==============================================
+   FOOTER
+   ============================================== */
+
+.footer-link {
+	display: block;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.875rem;
+	transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+	color: var(--color-primary-300);
+}
+
+.footer-link-contact {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.875rem;
+	transition: color 0.2s ease;
+}
+
+.footer-link-contact:hover {
+	color: var(--color-primary-300);
+}
+
+/* ==============================================
+   PRICING CARDS
+   ============================================== */
+
+.pricing-card {
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(30, 41, 59, 0.6);
+	border: 2px solid rgba(6, 182, 212, 0.2);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+	.pricing-card {
+		padding: 2rem;
+	}
+}
+
+.pricing-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: linear-gradient(to right, var(--color-primary-500), var(--color-accent-400));
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.pricing-card:hover {
+	transform: translateY(-8px);
+	border-color: var(--color-primary-500);
+	box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.3);
+}
+
+.pricing-card:hover::before {
+	opacity: 1;
+}
+
+.pricing-card-popular {
+	border-color: var(--color-secondary-400);
+	transform: scale(1.05);
+	background-color: rgba(30, 41, 59, 0.8);
+}
+
+.btn-plan {
+	display: block;
+	width: 100%;
+	padding: 0.75rem 1.5rem;
+	border-radius: 9999px;
+	font-weight: 700;
+	font-size: 1.125rem;
+	text-align: center;
+	color: var(--color-dark-900);
+	background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
+	transition: all 0.3s ease;
+}
+
+.btn-plan:hover {
+	background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-700));
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(6, 182, 212, 0.5);
+}
+
+.btn-plan-popular {
+	background: linear-gradient(to right, var(--color-secondary-400), var(--color-secondary-500));
+}
+
+.btn-plan-popular:hover {
+	background: linear-gradient(to right, var(--color-secondary-500), var(--color-secondary-600));
+}
+
+/* ==============================================
+   FEATURE BOX
+   ============================================== */
+
+.feature-box {
+	text-align: center;
+	padding: 1.5rem;
+	background-color: rgba(30, 41, 59, 0.6);
+	border: 1px solid rgba(6, 182, 212, 0.1);
+	border-radius: 0.75rem;
+	transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+	transform: translateY(-8px);
+	border-color: var(--color-primary-500);
+	box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+}
+
+.feature-icon-wrapper {
+	width: 4rem;
+	height: 4rem;
+	margin: 0 auto 1rem;
+	background: linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-600));
+	border-radius: 9999px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ==============================================
+   UTILITY CLASSES (kept minimal)
+   ============================================== */
+
+.popular-badge {
+	position: absolute;
+	top: 1.25rem;
+	right: 1.25rem;
+	background-color: var(--color-secondary-400);
+	color: var(--color-dark-900);
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.75rem;
+	font-weight: 700;
+}
+
+.pricing-header {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.pricing-name {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: white;
+	margin-bottom: 0.5rem;
+}
+
+.pricing-duration {
+	color: var(--color-primary-400);
+	font-size: 0.875rem;
+}
+
+.pricing-price {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.price-amount {
+	font-size: 3rem;
+	font-weight: 800;
+	color: var(--color-secondary-400);
+	line-height: 1;
+}
+
+.price-currency {
+	font-size: 1.5rem;
+	vertical-align: super;
+}
+
+.price-period {
+	display: block;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.875rem;
+	margin-top: 0.5rem;
+}
+
+.launch-price {
+	display: inline-block;
+	background-color: rgba(251, 191, 36, 0.2);
+	border: 1px solid rgba(251, 191, 36, 0.3);
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+}
+
+.launch-price-text {
+	color: var(--color-secondary-400);
+	font-size: 0.875rem;
+	font-weight: 600;
+}
+
+.pricing-features {
+	list-style: none;
+	margin-bottom: 2rem;
+}
+
+.pricing-features li {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	color: rgba(255, 255, 255, 0.8);
+	border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+	padding-bottom: 0.75rem;
+	margin-bottom: 0.75rem;
+}
+
+.pricing-features li:last-child {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+.feature-icon {
+	height: 1.25rem;
+	width: 1.25rem;
+	color: var(--color-primary-400);
+	flex-shrink: 0;
+	margin-top: 0.125rem;
+}
+
+.feature-title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: white;
+	margin-bottom: 0.5rem;
+}
+
+.feature-description {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.875rem;
+	line-height: 1.625;
+}
+
+/* ==============================================
+   RESELLER SECTION
+   ============================================== */
+
+/* Reseller pricing cards */
+.reseller-card {
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(30, 41, 59, 0.6);
+	border: 2px solid rgba(6, 182, 212, 0.2);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+	.reseller-card {
+		padding: 2rem;
+	}
+}
+
+.reseller-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: linear-gradient(to right, var(--color-primary-500), var(--color-secondary-400));
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.reseller-card:hover {
+	transform: translateY(-8px);
+	border-color: var(--color-primary-500);
+	box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.3);
+}
+
+.reseller-card:hover::before {
+	opacity: 1;
+}
+
+/* Premium reseller cards (Super Reseller) */
+.reseller-card-premium {
+	border-color: rgba(251, 191, 36, 0.3);
+	background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(251, 191, 36, 0.05) 100%);
+}
+
+.reseller-card-premium::before {
+	background: linear-gradient(to right, var(--color-secondary-400), var(--color-secondary-500));
+}
+
+.reseller-card-premium:hover {
+	border-color: var(--color-secondary-400);
+	box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.4);
+}
+
+/* Premium badge for Super Reseller */
+.premium-badge {
+	position: absolute;
+	top: 1.25rem;
+	right: 1.25rem;
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+	background: linear-gradient(to right, var(--color-secondary-400), var(--color-secondary-500));
+	color: var(--color-dark-900);
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.65rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+/* Reseller credits display */
+.reseller-credits {
+	color: var(--color-secondary-400);
+	font-size: 0.875rem;
+	font-weight: 600;
+}
+
+/* Profit indicator */
+.profit-indicator {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: rgba(251, 191, 36, 0.1);
+	border: 1px solid rgba(251, 191, 36, 0.3);
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+}
+
+.profit-text {
+	color: var(--color-secondary-400);
+	font-size: 0.75rem;
+	font-weight: 600;
+}
+
+/* Premium plan button */
+.btn-plan-premium {
+	background: linear-gradient(to right, var(--color-secondary-400), var(--color-secondary-500));
+}
+
+.btn-plan-premium:hover {
+	background: linear-gradient(to right, var(--color-secondary-500), var(--color-secondary-600));
+}
+
+/* Reseller calculator */
+.calculator-input {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	background-color: rgba(30, 41, 59, 0.8);
+	border: 1px solid rgba(6, 182, 212, 0.3);
+	border-radius: 0.5rem;
+	color: white;
+	font-size: 1rem;
+	transition: all 0.2s ease;
+}
+
+.calculator-input:focus {
+	outline: none;
+	border-color: var(--color-primary-500);
+	box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.calculator-input:hover {
+	border-color: var(--color-primary-400);
+}
+
+/* Benefit cards for reseller section */
+.benefit-card {
+	background-color: rgba(30, 41, 59, 0.6);
+	border: 1px solid rgba(6, 182, 212, 0.1);
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	transition: all 0.3s ease;
+	text-align: center;
+}
+
+.benefit-card:hover {
+	transform: translateY(-8px);
+	border-color: var(--color-primary-500);
+	box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+}
+
+.benefit-icon-wrapper {
+	width: 4rem;
+	height: 4rem;
+	margin: 0 auto 1rem;
+	background: linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-600));
+	border-radius: 9999px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

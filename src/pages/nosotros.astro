@@ -1,0 +1,341 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import OptimizedImage from '../components/OptimizedImage.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<MainLayout
+	title="Sobre Nosotros - AmericaPlay | Innovación y Calidad"
+	description="Conoce AmericaPlay, tu socio tecnológico especializado en plataformas OTT/IPTV y desarrollo de software. Pasión por la tecnología, compromiso con la excelencia."
+>
+	<!-- Hero Section -->
+	<section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
+		<div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-blue-900 to-dark-800"></div>
+		<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"></div>
+
+		<div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<div class="mb-8 flex justify-center">
+				<OptimizedImage
+					src="/images/logo.jpeg"
+					alt="AmericaPlay Logo"
+					width={150}
+					height={150}
+					class="h-40 w-40 rounded-full shadow-2xl shadow-primary-500/50 ring-4 ring-primary-500/30"
+					loading="eager"
+				/>
+			</div>
+
+			<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+				<span class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+					Tecnología Que
+				</span>
+				<br />
+				<span class="text-secondary-400">Transforma</span>
+			</h1>
+
+			<p class="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+				Somos un equipo apasionado por crear soluciones tecnológicas que impulsan negocios y mejoran experiencias digitales.
+			</p>
+		</div>
+	</section>
+
+	<!-- Who We Are -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-dark-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid lg:grid-cols-2 gap-12 items-center">
+				<div>
+					<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+						¿Quiénes Somos?
+					</h2>
+					<div class="space-y-4 text-white/70 leading-relaxed text-lg">
+						<p>
+							<span class="text-secondary-400 font-semibold">AmericaPlay</span> nace de la pasión por la tecnología y el compromiso con la excelencia. Somos especialistas en crear plataformas de streaming OTT/IPTV y desarrollar soluciones de software personalizadas para empresas de todos los tamaños.
+						</p>
+						<p>
+							Con años de experiencia en la industria tecnológica, hemos ayudado a decenas de empresas a transformar sus ideas en productos digitales exitosos. Desde startups innovadoras hasta corporaciones establecidas, nuestro enfoque siempre es el mismo: <span class="text-primary-400 font-semibold">calidad, innovación y resultados medibles</span>.
+						</p>
+						<p>
+							No somos solo proveedores de tecnología, somos <span class="text-white font-semibold">socios estratégicos</span> que nos involucramos profundamente en el éxito de cada proyecto. Entendemos que detrás de cada línea de código hay objetivos de negocio reales y personas que confían en nosotros.
+						</p>
+					</div>
+				</div>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+					<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 text-center">
+						<div class="text-4xl md:text-5xl font-extrabold text-primary-400 mb-2">5+</div>
+						<p class="text-white/70 text-sm md:text-base">Años de Experiencia</p>
+					</div>
+					<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 text-center">
+						<div class="text-4xl md:text-5xl font-extrabold text-secondary-400 mb-2">100+</div>
+						<p class="text-white/70 text-sm md:text-base">Proyectos Completados</p>
+					</div>
+					<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 text-center">
+						<div class="text-4xl md:text-5xl font-extrabold text-accent-400 mb-2">50+</div>
+						<p class="text-white/70 text-sm md:text-base">Clientes Satisfechos</p>
+					</div>
+					<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 text-center">
+						<div class="text-4xl md:text-5xl font-extrabold text-primary-400 mb-2">24/7</div>
+						<p class="text-white/70 text-sm md:text-base">Soporte Disponible</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Mission & Vision -->
+	<section class="py-20 bg-blue-900/30">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid md:grid-cols-2 gap-8">
+				<!-- Mission -->
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-2xl p-8">
+					<div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mb-6">
+						<Icon name="target" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-3xl font-bold text-white mb-4">Nuestra Misión</h3>
+					<p class="text-white/70 leading-relaxed text-lg">
+						Empoderar a empresas y emprendedores con tecnología de vanguardia que transforma ideas en experiencias digitales extraordinarias. Nos comprometemos a entregar soluciones que no solo cumplen expectativas, sino que las superan, generando impacto real en los negocios de nuestros clientes.
+					</p>
+				</div>
+
+				<!-- Vision -->
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-2xl p-8">
+					<div class="w-20 h-20 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full flex items-center justify-center mb-6">
+						<Icon name="eye" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-3xl font-bold text-white mb-4">Nuestra Visión</h3>
+					<p class="text-white/70 leading-relaxed text-lg">
+						Ser el referente latinoamericano en desarrollo de plataformas de streaming y soluciones de software empresarial, reconocidos por nuestra innovación constante, calidad excepcional y el éxito medible de nuestros clientes. Queremos ser el socio tecnológico que toda empresa desea tener.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Values -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-dark-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Nuestros Valores
+				</h2>
+				<p class="text-xl text-white/70 max-w-2xl mx-auto">
+					Los principios que guían cada decisión y cada línea de código
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mb-4">
+						<Icon name="award" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h4 class="text-xl font-bold text-white mb-3">Excelencia</h4>
+					<p class="text-white/70 leading-relaxed">
+						No aceptamos nada menos que lo mejor. Cada proyecto es una oportunidad para demostrar nuestra calidad y profesionalismo.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-16 h-16 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full flex items-center justify-center mb-4">
+						<Icon name="lightbulb" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h4 class="text-xl font-bold text-white mb-3">Innovación</h4>
+					<p class="text-white/70 leading-relaxed">
+						Buscamos constantemente nuevas formas de resolver problemas y crear soluciones más eficientes y efectivas.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center mb-4">
+						<Icon name="shield" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h4 class="text-xl font-bold text-white mb-3">Integridad</h4>
+					<p class="text-white/70 leading-relaxed">
+						Honestidad y transparencia en cada interacción. Construimos relaciones basadas en la confianza mutua.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mb-4">
+						<Icon name="users" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h4 class="text-xl font-bold text-white mb-3">Colaboración</h4>
+					<p class="text-white/70 leading-relaxed">
+						Trabajamos hombro a hombro con nuestros clientes, combinando experiencias para lograr resultados extraordinarios.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-16 h-16 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full flex items-center justify-center mb-4">
+						<Icon name="zap" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h4 class="text-xl font-bold text-white mb-3">Agilidad</h4>
+					<p class="text-white/70 leading-relaxed">
+						Nos adaptamos rápidamente a los cambios y entregamos valor de forma continua con metodologías ágiles.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center mb-4">
+						<Icon name="heart" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h4 class="text-xl font-bold text-white mb-3">Pasión</h4>
+					<p class="text-white/70 leading-relaxed">
+						Amamos lo que hacemos. Esa pasión se refleja en cada proyecto y en la satisfacción de nuestros clientes.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What Makes Us Different -->
+	<section class="py-20 bg-blue-900/30">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					¿Qué Nos Hace Diferentes?
+				</h2>
+				<p class="text-xl text-white/70 max-w-2xl mx-auto">
+					Nuestra ventaja competitiva en un mercado exigente
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="code" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Código de Calidad</h3>
+					<p class="text-white/70">Estándares profesionales, testing exhaustivo y documentación completa en cada proyecto.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="trending-up" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Escalabilidad</h3>
+					<p class="text-white/70">Arquitecturas pensadas para crecer. Tus sistemas evolucionan con tu negocio.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="globe" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Experiencia Global</h3>
+					<p class="text-white/70">Trabajamos con clientes de múltiples países, entendiendo necesidades diversas.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="rocket" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Time to Market</h3>
+					<p class="text-white/70">Metodologías ágiles que aceleran el desarrollo sin sacrificar calidad.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Tech Stack -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-dark-800">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Tecnologías Que Dominamos
+				</h2>
+				<p class="text-xl text-white/70">
+					Stack tecnológico moderno y en constante evolución
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h4 class="text-xl font-bold text-white mb-4 text-center">Frontend</h4>
+					<ul class="space-y-2 text-white/70">
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-primary-400 rounded-full"></div>
+							React, Vue.js, Angular
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-primary-400 rounded-full"></div>
+							Next.js, Nuxt, Astro
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-primary-400 rounded-full"></div>
+							TypeScript, JavaScript
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-primary-400 rounded-full"></div>
+							Tailwind CSS, Sass
+						</li>
+					</ul>
+				</div>
+
+				<div class="bg-dark-800/60 border border-secondary-500/20 rounded-xl p-6">
+					<h4 class="text-xl font-bold text-white mb-4 text-center">Backend</h4>
+					<ul class="space-y-2 text-white/70">
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-secondary-400 rounded-full"></div>
+							Node.js, Express
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-secondary-400 rounded-full"></div>
+							Python, Django, FastAPI
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-secondary-400 rounded-full"></div>
+							PHP, Laravel
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-secondary-400 rounded-full"></div>
+							Java, Spring Boot
+						</li>
+					</ul>
+				</div>
+
+				<div class="bg-dark-800/60 border border-accent-500/20 rounded-xl p-6">
+					<h4 class="text-xl font-bold text-white mb-4 text-center">Mobile & Cloud</h4>
+					<ul class="space-y-2 text-white/70">
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-accent-400 rounded-full"></div>
+							React Native, Flutter
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-accent-400 rounded-full"></div>
+							iOS (Swift), Android (Kotlin)
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-accent-400 rounded-full"></div>
+							AWS, Google Cloud, Azure
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-accent-400 rounded-full"></div>
+							Docker, Kubernetes
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-blue-900 relative overflow-hidden">
+		<div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.2) 0%, transparent 70%);"></div>
+
+		<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+				¿Quieres Ser Parte de Nuestro Éxito?
+			</h2>
+			<p class="text-xl text-white/80 mb-8">
+				Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contacto" class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-primary-500/50 hover:-translate-y-1 inline-block">
+					Contactar Ahora
+				</a>
+				<a href="/servicios" class="border-2 border-secondary-400 text-secondary-400 hover:bg-secondary-400 hover:text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-secondary-400/50 hover:-translate-y-1 inline-block">
+					Ver Servicios
+				</a>
+			</div>
+		</div>
+	</section>
+</MainLayout>

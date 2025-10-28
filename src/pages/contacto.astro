@@ -1,0 +1,276 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<MainLayout
+	title="Contacto - AmericaPlay | Atención 24/7"
+	description="Contáctanos para planes IPTV, servicios empresariales o soporte técnico. Disponibles 24/7 por WhatsApp, email y teléfono."
+>
+	<!-- Hero Section -->
+	<section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
+		<div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-blue-900 to-dark-800"></div>
+		<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"></div>
+
+		<div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+				<span class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+					Estamos Para
+				</span>
+				<br />
+				<span class="text-secondary-400">Ayudarte</span>
+			</h1>
+
+			<p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+				Contáctanos para planes IPTV, servicios empresariales o cualquier consulta. Respuesta garantizada en menos de 24 horas.
+			</p>
+		</div>
+	</section>
+
+	<!-- Contact Methods & Form -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-dark-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid lg:grid-cols-2 gap-12">
+				<!-- Contact Information -->
+				<div>
+					<h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+						Información de Contacto
+					</h2>
+
+					<div class="space-y-6 mb-12">
+						<!-- WhatsApp -->
+						<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+							<div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+								<Icon name="message-circle" class="h-6 w-6 text-dark-900" />
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-white mb-1">WhatsApp</h3>
+								<p class="text-white/70 mb-2">Respuesta inmediata 24/7</p>
+								<p class="text-primary-400 font-semibold">+1 (234) 567-890</p>
+							</div>
+						</a>
+
+						<!-- Email -->
+						<a href="mailto:contacto@americaplay.com" class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+							<div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full flex items-center justify-center">
+								<Icon name="mail" class="h-6 w-6 text-dark-900" />
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-white mb-1">Email</h3>
+								<p class="text-white/70 mb-2">Para consultas detalladas</p>
+								<p class="text-secondary-400 font-semibold">contacto@americaplay.com</p>
+							</div>
+						</a>
+
+						<!-- Phone -->
+						<a href="tel:+1234567890" class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+							<div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center">
+								<Icon name="phone" class="h-6 w-6 text-dark-900" />
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-white mb-1">Teléfono</h3>
+								<p class="text-white/70 mb-2">Llamadas directas</p>
+								<p class="text-accent-400 font-semibold">+1 (234) 567-890</p>
+							</div>
+						</a>
+					</div>
+
+					<!-- Additional Info -->
+					<div class="bg-blue-900/30 border border-primary-500/20 rounded-xl p-6">
+						<div class="flex items-start gap-4 mb-4">
+							<Icon name="clock" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-1" />
+							<div>
+								<h4 class="text-lg font-bold text-white mb-1">Horario de Atención</h4>
+								<p class="text-white/70">Disponibles 24 horas, 7 días a la semana</p>
+							</div>
+						</div>
+
+						<div class="flex items-start gap-4">
+							<Icon name="map-pin" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-1" />
+							<div>
+								<h4 class="text-lg font-bold text-white mb-1">Ubicación</h4>
+								<p class="text-white/70">Servicio internacional. Atendemos clientes en todo el mundo.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Contact Form -->
+				<div>
+					<h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+						Envíanos un Mensaje
+					</h2>
+
+					<form class="space-y-6" action="#" method="POST">
+						<!-- Name -->
+						<div>
+							<label for="name" class="block text-sm font-medium text-white/90 mb-2">
+								Nombre Completo
+							</label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								required
+								class="w-full px-4 py-3 bg-dark-800/60 border border-primary-500/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all"
+								placeholder="Juan Pérez"
+							/>
+						</div>
+
+						<!-- Email -->
+						<div>
+							<label for="email" class="block text-sm font-medium text-white/90 mb-2">
+								Email
+							</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required
+								class="w-full px-4 py-3 bg-dark-800/60 border border-primary-500/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all"
+								placeholder="tu@email.com"
+							/>
+						</div>
+
+						<!-- Phone -->
+						<div>
+							<label for="phone" class="block text-sm font-medium text-white/90 mb-2">
+								Teléfono (Opcional)
+							</label>
+							<input
+								type="tel"
+								id="phone"
+								name="phone"
+								class="w-full px-4 py-3 bg-dark-800/60 border border-primary-500/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all"
+								placeholder="+1 234 567 890"
+							/>
+						</div>
+
+						<!-- Subject -->
+						<div>
+							<label for="subject" class="block text-sm font-medium text-white/90 mb-2">
+								Asunto
+							</label>
+							<select
+								id="subject"
+								name="subject"
+								required
+								class="w-full px-4 py-3 bg-dark-800/60 border border-primary-500/20 rounded-lg text-white focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all"
+							>
+								<option value="">Selecciona un asunto</option>
+								<option value="iptv">Plan IPTV / Prueba Gratis</option>
+								<option value="reseller">Programa de Resellers</option>
+								<option value="enterprise">Servicios Empresariales</option>
+								<option value="ott">Plataforma OTT/IPTV</option>
+								<option value="development">Desarrollo Web/Móvil</option>
+								<option value="support">Soporte Técnico</option>
+								<option value="other">Otro</option>
+							</select>
+						</div>
+
+						<!-- Message -->
+						<div>
+							<label for="message" class="block text-sm font-medium text-white/90 mb-2">
+								Mensaje
+							</label>
+							<textarea
+								id="message"
+								name="message"
+								rows="5"
+								required
+								class="w-full px-4 py-3 bg-dark-800/60 border border-primary-500/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all resize-none"
+								placeholder="Cuéntanos cómo podemos ayudarte..."
+							></textarea>
+						</div>
+
+						<!-- Submit Button -->
+						<button
+							type="submit"
+							class="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-primary-500/50 hover:-translate-y-1 flex items-center justify-center gap-2"
+						>
+							<Icon name="send" class="h-5 w-5" />
+							<span>Enviar Mensaje</span>
+						</button>
+
+						<p class="text-sm text-white/60 text-center">
+							Responderemos tu consulta en menos de 24 horas
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section id="faq" class="py-20 bg-blue-900/30">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Preguntas Frecuentes
+				</h2>
+				<p class="text-xl text-white/70">
+					Respuestas a las consultas más comunes
+				</p>
+			</div>
+
+			<div class="space-y-6">
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Cómo puedo probar el servicio IPTV?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Contáctanos por WhatsApp o el formulario y te proporcionaremos una prueba gratuita de 24 horas. No requiere tarjeta de crédito ni compromiso.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Cuánto demora una cotización de servicios empresariales?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Generalmente respondemos dentro de las primeras 24 horas. Para proyectos complejos, podemos agendar una videollamada para entender mejor tus necesidades.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Ofrecen soporte técnico post-venta?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Sí, todos nuestros planes y servicios incluyen soporte técnico. Para clientes IPTV es 24/7, y para servicios empresariales ofrecemos contratos de mantenimiento personalizados.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Trabajan con clientes internacionales?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Absolutamente. Tenemos clientes en múltiples países y estamos equipados para trabajar en diferentes zonas horarias y modalidades de pago internacional.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Qué métodos de pago aceptan?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Para planes IPTV: transferencias bancarias, PayPal, criptomonedas y más. Para proyectos empresariales: transferencias, cheques y pagos programados según contrato.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Cómo empiezo con un proyecto de desarrollo?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Primero agendamos una reunión de descubrimiento (presencial o virtual), luego preparamos una propuesta técnica con cotización. Si aceptas, comenzamos el desarrollo en sprints ágiles con entregas parciales.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Quick CTA -->
+	<section class="py-16 bg-gradient-to-r from-secondary-400/20 to-secondary-400/10 border-y-2 border-secondary-400/30">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h3 class="text-3xl font-bold text-secondary-400 mb-4">
+				¿Prefieres Hablar Directamente?
+			</h3>
+			<p class="text-xl text-white/80 mb-8">
+				Estamos disponibles en WhatsApp para responder tus preguntas al instante
+			</p>
+			<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-primary-500/50 hover:-translate-y-1 inline-block">
+				Abrir WhatsApp
+			</a>
+		</div>
+	</section>
+</MainLayout>

@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+	src: ImageMetadata | string;
+	alt: string;
+	width?: number;
+	height?: number;
+	class?: string;
+	loading?: 'lazy' | 'eager';
+	format?: 'avif' | 'webp' | 'jpeg' | 'png';
+	quality?: number;
+}
+
+const {
+	src,
+	alt,
+	width,
+	height,
+	class: className = '',
+	loading = 'lazy',
+	format = 'webp',
+	quality = 80,
+} = Astro.props;
+
+// Si es una imagen importada (ImageMetadata), usar el componente Image
+// Si es una ruta string (public/), usar img tag normal
+const isImportedImage = typeof src !== 'string';
+---
+
+{
+	isImportedImage ? (
+		<Image
+			src={src}
+			alt={alt}
+			width={width}
+			height={height}
+			class={className}
+			loading={loading}
+			format={format}
+			quality={quality}
+		/>
+	) : (
+		<img
+			src={src}
+			alt={alt}
+			width={width}
+			height={height}
+			class={className}
+			loading={loading}
+		/>
+	)
+}

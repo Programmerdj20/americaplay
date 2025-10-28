@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>America Play - Soluciones Tecnológicas OTT/IPTV de Nueva Generación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0a1628;
+            --electric-blue: #00d9ff;
+            --accent-yellow: #ffc107;
+            --dark-blue: #0d1b2a;
+            --light-blue: #1b263b;
+            --text-light: #e0e1dd;
+            --text-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-blue);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navegación */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-separator {
+            width: 1px;
+            height: 20px;
+            background: rgba(0, 217, 255, 0.3);
+        }
+
+        .nav-highlight {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 193, 7, 0.1));
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--accent-yellow);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--electric-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--electric-blue);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, var(--electric-blue), #0099cc);
+            color: var(--primary-blue);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .cta-nav:hover {
+            background: transparent;
+            border-color: var(--electric-blue);
+            color: var(--electric-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z" fill="none" stroke="rgba(0,217,255,0.05)" stroke-width="1"/></svg>');
+            background-size: 200px;
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-white) 0%, var(--electric-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-text .highlight {
+            color: var(--accent-yellow);
+            -webkit-text-fill-color: var(--accent-yellow);
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--electric-blue), #0099cc);
+            color: var(--primary-blue);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            border-color: var(--electric-blue);
+            color: var(--electric-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid var(--accent-yellow);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-yellow);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 500px;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: rgba(27, 38, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: floatCard 3s ease-in-out infinite;
+        }
+
+        .floating-card:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-card:nth-child(2) {
+            top: 40%;
+            right: 10%;
+            animation-delay: 1s;
+        }
+
+        .floating-card:nth-child(3) {
+            bottom: 10%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .floating-card h3 {
+            color: var(--electric-blue);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .floating-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Sección de Valor */
+        .value-section {
+            padding: 6rem 2rem;
+            background: var(--light-blue);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .value-cards {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: rgba(10, 22, 40, 0.6);
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--electric-blue);
+            box-shadow: 0 20px 50px rgba(0, 217, 255, 0.2);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--electric-blue), #0099cc);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .value-card h3 {
+            color: var(--text-white);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Servicios Principales */
+        .services-section {
+            padding: 6rem 2rem;
+            background: var(--primary-blue);
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            gap: 3rem;
+        }
+
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: rgba(27, 38, 59, 0.4);
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            border-color: var(--electric-blue);
+            transform: scale(1.02);
+        }
+
+        .service-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-item:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .service-content h3 {
+            font-size: 2rem;
+            color: var(--accent-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .service-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: '▸';
+            color: var(--electric-blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .service-visual {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(0, 153, 204, 0.1));
+            border-radius: 15px;
+            padding: 2rem;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            border: 2px solid rgba(0, 217, 255, 0.2);
+        }
+
+        /* Sección CTA Final */
+        .final-cta {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+        }
+
+        .final-cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            font-size: 3rem;
+            color: var(--text-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            padding: 3rem 2rem 1.5rem;
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
+        }
+
+        /* Sección de Suscripción IPTV */
+        .subscription-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a0e1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subscription-section::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.05) 0%, transparent 70%);
+            top: -300px;
+            left: -300px;
+        }
+
+        .subscription-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subscription-hero h2 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--accent-yellow) 0%, #ffdd57 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .subscription-hero p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .plans-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .plan-card {
+            background: rgba(27, 38, 59, 0.6);
+            border: 2px solid rgba(0, 217, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--electric-blue), var(--accent-yellow));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--electric-blue);
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.3);
+        }
+
+        .plan-card:hover::before {
+            opacity: 1;
+        }
+
+        .plan-popular {
+            border-color: var(--accent-yellow);
+            transform: scale(1.05);
+            background: rgba(27, 38, 59, 0.8);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-yellow);
+            color: var(--primary-blue);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .plan-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .plan-duration {
+            color: var(--electric-blue);
+            font-size: 0.95rem;
+        }
+
+        .plan-price {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-yellow);
+            line-height: 1;
+        }
+
+        .price-currency {
+            font-size: 1.5rem;
+            vertical-align: super;
+        }
+
+        .price-period {
+            color: var(--text-light);
+            font-size: 1rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .launch-price {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 193, 7, 0.1));
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .launch-price-text {
+            color: var(--accent-yellow);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.8rem 0;
+            color: var(--text-light);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            color: var(--electric-blue);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .btn-plan {
+            width: 100%;
+            background: linear-gradient(135deg, var(--electric-blue), #0099cc);
+            color: var(--primary-blue);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: block;
+            text-align: center;
+        }
+
+        .btn-plan:hover {
+            background: transparent;
+            border-color: var(--electric-blue);
+            color: var(--electric-blue);
+            transform: translateY(-3px);
+        }
+
+        .btn-plan-popular {
+            background: linear-gradient(135deg, var(--accent-yellow), #ffdd57);
+            color: var(--primary-blue);
+        }
+
+        .btn-plan-popular:hover {
+            background: transparent;
+            border-color: var(--accent-yellow);
+            color: var(--accent-yellow);
+        }
+
+        /* Features Grid */
+        .features-grid-section {
+            padding: 6rem 2rem;
+            background: var(--light-blue);
+        }
+
+        .features-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(10, 22, 40, 0.6);
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--electric-blue);
+        }
+
+        .feature-box-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h3 {
+            color: var(--text-white);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Reseller Section */
+        .reseller-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 193, 7, 0.05));
+            border-top: 2px solid rgba(255, 193, 7, 0.3);
+            border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .reseller-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .reseller-content h3 {
+            font-size: 2rem;
+            color: var(--accent-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .reseller-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-yellow);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--electric-blue);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .service-item {
+                grid-template-columns: 1fr;
+            }
+
+            .service-item:nth-child(even) {
+                direction: ltr;
+            }
+
+            .cta-group {
+                justify-content: center;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animaciones de entrada */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <img src="/mnt/user-data/uploads/logo.jpeg" alt="America Play Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Para Empresas</a></li>
+                <li class="nav-separator"></li>
+                <li><a href="#suscripcion" class="nav-highlight">Planes IPTV</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="#contacto" class="cta-nav">Comenzar Ahora</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content fade-in">
+            <div class="hero-text">
+                <h1>
+                    La Plataforma Tecnológica Que 
+                    <span class="highlight">Crea y Ofrece</span> Streaming
+                </h1>
+                <p>
+                    Creamos plataformas OTT/IPTV para empresas y ofrecemos el mejor servicio de streaming directo a usuarios. Dos soluciones, una sola empresa.
+                </p>
+                <div class="cta-group">
+                    <a href="#suscripcion" class="btn-primary">Ver Planes IPTV</a>
+                    <a href="#servicios" class="btn-secondary">Soluciones Empresariales</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <h3>🚀 Lanzamiento Rápido</h3>
+                    <p>Tu plataforma en semanas, no meses</p>
+                </div>
+                <div class="floating-card">
+                    <h3>🎯 100% Personalizado</h3>
+                    <p>Soluciones diseñadas para ti</p>
+                </div>
+                <div class="floating-card">
+                    <h3>💰 ROI Garantizado</h3>
+                    <p>Tecnología que genera resultados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Valor -->
+    <section class="value-section">
+        <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+        <p class="section-subtitle">
+            No solo desarrollamos tecnología, creamos soluciones que transforman negocios
+        </p>
+        <div class="value-cards">
+            <div class="value-card">
+                <div class="value-icon">⚡</div>
+                <h3>Experiencia Comprobada</h3>
+                <p>Años especializados en streaming OTT/IPTV y desarrollo de plataformas de alto rendimiento</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🎨</div>
+                <h3>Diseño Excepcional</h3>
+                <p>Interfaces intuitivas que tus usuarios amarán desde el primer momento</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🔧</div>
+                <h3>Soporte 24/7</h3>
+                <p>Estamos contigo en cada paso, antes, durante y después del lanzamiento</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💎</div>
+                <h3>Tecnología de Punta</h3>
+                <p>Usamos las últimas tecnologías para garantizar escalabilidad y rendimiento</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Principales (B2B) -->
+    <section class="services-section" id="servicios">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 class="section-title">Soluciones para Empresas</h2>
+            <p class="section-subtitle">¿Quieres tu propia plataforma como America Play? Te ayudamos a crearla</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Servicio 1: OTT/IPTV -->
+            <div class="service-item">
+                <div class="service-content">
+                    <h3>🎬 Plataformas OTT/IPTV Premium</h3>
+                    <p>
+                        Crea tu propia Netflix, HBO o Disney+. Desarrollamos plataformas de streaming completas con tu marca, listas para monetizar desde el día uno.
+                    </p>
+                    <ul class="service-features">
+                        <li>Aplicaciones para todas las plataformas (iOS, Android, Smart TV, Web)</li>
+                        <li>CMS avanzado para gestión de contenido</li>
+                        <li>Múltiples modelos de monetización (SVOD, AVOD, TVOD, PPV)</li>
+                        <li>CDN de alto rendimiento sin buffering</li>
+                        <li>Análisis en tiempo real y métricas detalladas</li>
+                        <li>Protección DRM y seguridad de contenido</li>
+                    </ul>
+                    <a href="#contacto" class="btn-primary">Más Información</a>
+                </div>
+                <div class="service-visual">
+                    📺
+                </div>
+            </div>
+
+            <!-- Servicio 2: Desarrollo Web -->
+            <div class="service-item">
+                <div class="service-content">
+                    <h3>💻 Desarrollo Web & Mobile</h3>
+                    <p>
+                        Aplicaciones web y móviles que convierten visitantes en clientes. Desde e-commerce hasta plataformas empresariales complejas.
+                    </p>
+                    <ul class="service-features">
+                        <li>E-commerce y marketplaces completos</li>
+                        <li>Aplicaciones móviles nativas e híbridas</li>
+                        <li>Progressive Web Apps (PWA)</li>
+                        <li>Integraciones con APIs y servicios externos</li>
+                        <li>Diseño responsive y UX/UI optimizado</li>
+                        <li>SEO y optimización de rendimiento</li>
+                    </ul>
+                    <a href="#contacto" class="btn-primary">Más Información</a>
+                </div>
+                <div class="service-visual">
+                    🚀
+                </div>
+            </div>
+
+            <!-- Servicio 3: Soluciones Empresariales -->
+            <div class="service-item">
+                <div class="service-content">
+                    <h3>🏢 Soluciones Empresariales</h3>
+                    <p>
+                        Automatiza procesos, optimiza operaciones y escala tu negocio con sistemas diseñados específicamente para tus necesidades.
+                    </p>
+                    <ul class="service-features">
+                        <li>Sistemas ERP y CRM personalizados</li>
+                        <li>Automatización de procesos empresariales</li>
+                        <li>Dashboards y análisis de datos</li>
+                        <li>Integración con sistemas existentes</li>
+                        <li>Plataformas de gestión de proyectos</li>
+                        <li>Consultoría tecnológica estratégica</li>
+                    </ul>
+                    <a href="#contacto" class="btn-primary">Más Información</a>
+                </div>
+                <div class="service-visual">
+                    ⚙️
+                </div>
+            </div>
+
+            <!-- Servicio 4: Soluciones a Medida -->
+            <div class="service-item">
+                <div class="service-content">
+                    <h3>🎯 Desarrollo a Medida</h3>
+                    <p>
+                        ¿Tienes una idea única? La convertimos en realidad. Desarrollamos soluciones personalizadas que se adaptan perfectamente a tu visión de negocio.
+                    </p>
+                    <ul class="service-features">
+                        <li>Consultoría y arquitectura de soluciones</li>
+                        <li>Desarrollo desde cero según tus especificaciones</li>
+                        <li>Migración y modernización de sistemas legacy</li>
+                        <li>Prototipado rápido y MVP</li>
+                        <li>Integración multi-plataforma</li>
+                        <li>Mantenimiento y evolución continua</li>
+                    </ul>
+                    <a href="#contacto" class="btn-primary">Más Información</a>
+                </div>
+                <div class="service-visual">
+                    🛠️
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Suscripción IPTV (B2C) -->
+    <section class="subscription-section" id="suscripcion">
+        <div class="subscription-hero">
+            <h2>🎬 America Play IPTV Premium</h2>
+            <p>Televisión entretenida sin límites. Más de 1000 canales, películas, series y deportes en vivo</p>
+        </div>
+
+        <div class="plans-container">
+            <!-- Plan Mensual -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3 class="plan-name">Plan Mensual</h3>
+                    <p class="plan-duration">Facturación mensual</p>
+                </div>
+                <div class="plan-price">
+                    <div class="price-amount">
+                        <span class="price-currency">$</span>9.99
+                    </div>
+                    <span class="price-period">por mes</span>
+                    <div class="launch-price">
+                        <span class="launch-price-text">🔥 Precio de lanzamiento</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><span class="feature-icon">✓</span> 3 dispositivos simultáneos</li>
+                    <li><span class="feature-icon">✓</span> +1000 canales en vivo</li>
+                    <li><span class="feature-icon">✓</span> +90 canales deportivos</li>
+                    <li><span class="feature-icon">✓</span> Películas, series y animes</li>
+                    <li><span class="feature-icon">✓</span> Zona Kids protegida</li>
+                    <li><span class="feature-icon">✓</span> Calidad HD/4K</li>
+                    <li><span class="feature-icon">✓</span> Contenido adultos +18</li>
+                </ul>
+                <a href="#contacto" class="btn-plan">Contratar Ahora</a>
+            </div>
+
+            <!-- Plan 3 Meses -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3 class="plan-name">Plan 3 Meses</h3>
+                    <p class="plan-duration">Ahorra 15%</p>
+                </div>
+                <div class="plan-price">
+                    <div class="price-amount">
+                        <span class="price-currency">$</span>25.99
+                    </div>
+                    <span class="price-period">por 3 meses</span>
+                    <div class="launch-price">
+                        <span class="launch-price-text">🔥 Precio de lanzamiento</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><span class="feature-icon">✓</span> 3 dispositivos simultáneos</li>
+                    <li><span class="feature-icon">✓</span> +1000 canales en vivo</li>
+                    <li><span class="feature-icon">✓</span> +90 canales deportivos</li>
+                    <li><span class="feature-icon">✓</span> Películas, series y animes</li>
+                    <li><span class="feature-icon">✓</span> Zona Kids protegida</li>
+                    <li><span class="feature-icon">✓</span> Calidad HD/4K</li>
+                    <li><span class="feature-icon">✓</span> Contenido adultos +18</li>
+                </ul>
+                <a href="#contacto" class="btn-plan">Contratar Ahora</a>
+            </div>
+
+            <!-- Plan Anual - Popular -->
+            <div class="plan-card plan-popular">
+                <span class="popular-badge">MÁS POPULAR</span>
+                <div class="plan-header">
+                    <h3 class="plan-name">Plan Anual</h3>
+                    <p class="plan-duration">Ahorra 40% - Mejor valor</p>
+                </div>
+                <div class="plan-price">
+                    <div class="price-amount">
+                        <span class="price-currency">$</span>79.99
+                    </div>
+                    <span class="price-period">por año completo</span>
+                    <div class="launch-price">
+                        <span class="launch-price-text">🔥 Precio de lanzamiento</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><span class="feature-icon">✓</span> 5 dispositivos simultáneos</li>
+                    <li><span class="feature-icon">✓</span> +1000 canales en vivo</li>
+                    <li><span class="feature-icon">✓</span> +90 canales deportivos</li>
+                    <li><span class="feature-icon">✓</span> Películas, series y animes</li>
+                    <li><span class="feature-icon">✓</span> Zona Kids protegida</li>
+                    <li><span class="feature-icon">✓</span> Calidad HD/4K</li>
+                    <li><span class="feature-icon">✓</span> Contenido adultos +18</li>
+                    <li><span class="feature-icon">✓</span> Soporte prioritario 24/7</li>
+                </ul>
+                <a href="#contacto" class="btn-plan btn-plan-popular">Contratar Ahora</a>
+            </div>
+
+            <!-- Plan 6 Meses -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3 class="plan-name">Plan 6 Meses</h3>
+                    <p class="plan-duration">Ahorra 25%</p>
+                </div>
+                <div class="plan-price">
+                    <div class="price-amount">
+                        <span class="price-currency">$</span>49.99
+                    </div>
+                    <span class="price-period">por 6 meses</span>
+                    <div class="launch-price">
+                        <span class="launch-price-text">🔥 Precio de lanzamiento</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><span class="feature-icon">✓</span> 3 dispositivos simultáneos</li>
+                    <li><span class="feature-icon">✓</span> +1000 canales en vivo</li>
+                    <li><span class="feature-icon">✓</span> +90 canales deportivos</li>
+                    <li><span class="feature-icon">✓</span> Películas, series y animes</li>
+                    <li><span class="feature-icon">✓</span> Zona Kids protegida</li>
+                    <li><span class="feature-icon">✓</span> Calidad HD/4K</li>
+                    <li><span class="feature-icon">✓</span> Contenido adultos +18</li>
+                </ul>
+                <a href="#contacto" class="btn-plan">Contratar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-grid-section">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 class="section-title">¿Qué Incluye America Play?</h2>
+            <p class="section-subtitle">Todo el entretenimiento que necesitas en un solo lugar</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-box-icon">🎬</div>
+                <h3>Películas</h3>
+                <p>Miles de películas en HD y 4K. Desde clásicos hasta los últimos estrenos</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-box-icon">📺</div>
+                <h3>Series de TV</h3>
+                <p>Las mejores series del momento con nuevos episodios cada semana</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-box-icon">👶</div>
+                <h3>Kids Zone</h3>
+                <p>Contenido seguro y educativo para los más pequeños del hogar</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-box-icon">⚽</div>
+                <h3>Deportes en Vivo</h3>
+                <p>+90 canales deportivos. No te pierdas ningún partido o evento importante</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-box-icon">📱</div>
+                <h3>Multi-dispositivo</h3>
+                <p>Ve en Smart TV, celular, tablet, PC o cualquier dispositivo</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-box-icon">🌐</div>
+                <h3>Sin Restricciones</h3>
+                <p>Acceso desde cualquier lugar del mundo, sin bloqueos regionales</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseller Section -->
+    <section class="reseller-section">
+        <div class="reseller-content">
+            <h3>💼 Únete a Nuestro Programa de Resellers</h3>
+            <p>Maximiza tus ganancias revendiendo nuestros servicios premium. Comisiones atractivas y soporte completo</p>
+            <a href="#contacto" class="btn-primary">Quiero Ser Reseller</a>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta" id="contacto">
+        <div class="final-cta-content">
+            <h2>¿Listo Para Dar el Siguiente Paso?</h2>
+            <p>
+                Ya sea que quieras crear tu propia plataforma o suscribirte a nuestro servicio IPTV premium
+            </p>
+            <div class="cta-group" style="justify-content: center;">
+                <a href="mailto:contacto@americaplay.com" class="btn-primary">Contactar Ahora</a>
+                <a href="https://wa.me/1234567890" class="btn-secondary">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>America Play</h4>
+                <p>Creamos plataformas tecnológicas y ofrecemos streaming premium</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">🎬 Tu socio tecnológico de confianza</p>
+            </div>
+            <div class="footer-section">
+                <h4>Para Empresas</h4>
+                <a href="#servicios">Plataformas OTT/IPTV</a>
+                <a href="#servicios">Desarrollo Web & Mobile</a>
+                <a href="#servicios">Soluciones Empresariales</a>
+                <a href="#servicios">Desarrollo a Medida</a>
+            </div>
+            <div class="footer-section">
+                <h4>Para Usuarios</h4>
+                <a href="#suscripcion">Planes IPTV</a>
+                <a href="#suscripcion">Programa de Resellers</a>
+                <a href="#contacto">Prueba Gratis 24h</a>
+                <a href="#contacto">Preguntas Frecuentes</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <a href="mailto:contacto@americaplay.com">contacto@americaplay.com</a>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                <a href="https://wa.me/1234567890">WhatsApp: +1 234 567 890</a>
+                <p>Disponible 24/7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 America Play. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar transparency on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(10, 22, 40, 0.98)';
+            } else {
+                nav.style.background = 'rgba(10, 22, 40, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>

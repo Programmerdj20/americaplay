@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const {
+	title,
+	description = 'AmericaPlay - Plataforma tecnológica para streaming OTT/IPTV y servicios premium para empresas y usuarios'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO -->
+		<meta name="keywords" content="OTT, IPTV, streaming, plataforma streaming, desarrollo web, aplicaciones móviles" />
+		<meta name="author" content="AmericaPlay" />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/images/logo.jpeg" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+
+		<title>{title}</title>
+	</head>
+	<body class="bg-dark-950 text-white antialiased">
+		<Navigation />
+
+		<main>
+			<slot />
+		</main>
+
+		<Footer />
+
+		<!-- Optimized Scripts -->
+		<script>
+			// Navbar scroll effect with throttle using requestAnimationFrame
+			(function() {
+				const nav = document.querySelector('nav');
+				if (!nav) return;
+
+				let ticking = false;
+				let lastScrollY = window.scrollY;
+
+				function updateNavbar() {
+					if (lastScrollY > 50) {
+						nav.classList.add('nav-scrolled');
+					} else {
+						nav.classList.remove('nav-scrolled');
+					}
+					ticking = false;
+				}
+
+				function onScroll() {
+					lastScrollY = window.scrollY;
+					if (!ticking) {
+						window.requestAnimationFrame(updateNavbar);
+						ticking = true;
+					}
+				}
+
+				window.addEventListener('scroll', onScroll, { passive: true });
+
+				// Initial check
+				if (lastScrollY > 50) {
+					nav.classList.add('nav-scrolled');
+				}
+			})();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+---
+import Icon from '../Icon.astro';
+---
+
+<div class="reseller-calculator bg-dark-800/60 border border-primary-500/20 rounded-2xl p-8">
+	<div class="text-center mb-8">
+		<div class="w-16 h-16 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+			<Icon name="calculator" class="h-8 w-8 text-dark-900" />
+		</div>
+		<h3 class="text-3xl font-bold text-white mb-2">Calculadora de Ganancias</h3>
+		<p class="text-white/70">Calcula tu potencial de ingresos como reseller</p>
+	</div>
+
+	<div class="space-y-6 mb-8">
+		<!-- Créditos a vender por mes -->
+		<div>
+			<label for="credits-sell" class="block text-white font-semibold mb-2">
+				Créditos que planeas vender por mes
+			</label>
+			<input
+				type="number"
+				id="credits-sell"
+				value="50"
+				min="1"
+				max="1000"
+				class="calculator-input"
+			/>
+		</div>
+
+		<!-- Precio por crédito -->
+		<div>
+			<label for="price-per-credit" class="block text-white font-semibold mb-2">
+				Precio de venta por crédito (USD)
+			</label>
+			<input
+				type="number"
+				id="price-per-credit"
+				value="10"
+				min="1"
+				max="50"
+				step="0.5"
+				class="calculator-input"
+			/>
+		</div>
+
+		<!-- Costo del plan -->
+		<div>
+			<label for="plan-cost" class="block text-white font-semibold mb-2">
+				Costo mensual de tu plan
+			</label>
+			<select id="plan-cost" class="calculator-input">
+				<option value="66">Reseller Jr - $66</option>
+				<option value="100" selected>Reseller Md - $100</option>
+				<option value="128">Reseller Sr - $128</option>
+				<option value="150">Super Reseller Bronce - $150</option>
+				<option value="260">Super Reseller Plata - $260</option>
+				<option value="330">Super Reseller Oro - $330</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- Resultados -->
+	<div class="space-y-4 p-6 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 border border-primary-500/30 rounded-xl">
+		<div class="flex justify-between items-center">
+			<span class="text-white/80">Ingresos mensuales:</span>
+			<span class="text-2xl font-bold text-primary-400" id="monthly-income">$500</span>
+		</div>
+
+		<div class="flex justify-between items-center">
+			<span class="text-white/80">Costo del plan:</span>
+			<span class="text-xl font-semibold text-white/60" id="plan-expense">-$100</span>
+		</div>
+
+		<div class="border-t border-primary-500/20 pt-4">
+			<div class="flex justify-between items-center mb-2">
+				<span class="text-white font-bold text-lg">Ganancia mensual:</span>
+				<span class="text-3xl font-extrabold text-secondary-400" id="monthly-profit">$400</span>
+			</div>
+			<div class="flex justify-between items-center">
+				<span class="text-white/70">Ganancia anual:</span>
+				<span class="text-2xl font-bold text-secondary-300" id="yearly-profit">$4,800</span>
+			</div>
+		</div>
+
+		<div class="pt-4 border-t border-primary-500/20">
+			<div class="flex items-center gap-2 justify-center">
+				<Icon name="trending-up" class="h-5 w-5 text-secondary-400" />
+				<span class="text-secondary-400 font-semibold">ROI: <span id="roi">400%</span></span>
+			</div>
+		</div>
+	</div>
+
+	<p class="text-center text-white/60 text-sm mt-6">
+		Estos cálculos son estimados. Los resultados reales pueden variar según tu estrategia de ventas.
+	</p>
+</div>
+
+<script>
+	(function() {
+		const creditsInput = document.getElementById('credits-sell') as HTMLInputElement;
+		const priceInput = document.getElementById('price-per-credit') as HTMLInputElement;
+		const planCostSelect = document.getElementById('plan-cost') as HTMLSelectElement;
+
+		const monthlyIncomeEl = document.getElementById('monthly-income');
+		const planExpenseEl = document.getElementById('plan-expense');
+		const monthlyProfitEl = document.getElementById('monthly-profit');
+		const yearlyProfitEl = document.getElementById('yearly-profit');
+		const roiEl = document.getElementById('roi');
+
+		function calculate() {
+			const credits = parseInt(creditsInput?.value || '0');
+			const pricePerCredit = parseFloat(priceInput?.value || '0');
+			const planCost = parseFloat(planCostSelect?.value || '0');
+
+			const monthlyIncome = credits * pricePerCredit;
+			const monthlyProfit = monthlyIncome - planCost;
+			const yearlyProfit = monthlyProfit * 12;
+			const roi = planCost > 0 ? ((monthlyProfit / planCost) * 100).toFixed(0) : 0;
+
+			if (monthlyIncomeEl) monthlyIncomeEl.textContent = `$${monthlyIncome.toLocaleString()}`;
+			if (planExpenseEl) planExpenseEl.textContent = `-$${planCost.toLocaleString()}`;
+			if (monthlyProfitEl) monthlyProfitEl.textContent = `$${monthlyProfit.toLocaleString()}`;
+			if (yearlyProfitEl) yearlyProfitEl.textContent = `$${yearlyProfit.toLocaleString()}`;
+			if (roiEl) roiEl.textContent = `${roi}%`;
+		}
+
+		creditsInput?.addEventListener('input', calculate);
+		priceInput?.addEventListener('input', calculate);
+		planCostSelect?.addEventListener('change', calculate);
+
+		// Initial calculation
+		calculate();
+	})();
+</script>

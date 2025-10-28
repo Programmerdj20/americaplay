@@ -1,0 +1,203 @@
+---
+import OptimizedImage from './OptimizedImage.astro';
+import Icon from './Icon.astro';
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="fixed w-full top-0 z-50 bg-dark-900/98 border-b border-primary-500/10 transition-all duration-300">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex justify-between items-center h-20">
+			<!-- Logo -->
+			<a href="/" class="flex items-center space-x-3 hover:opacity-90 transition">
+				<OptimizedImage
+					src="/images/Logo_redondo.webp"
+					alt="AmericaPlay Logo"
+					width={48}
+					height={48}
+					class="h-10 w-10 rounded-full"
+					loading="eager"
+				/>
+			</a>
+
+			<!-- Desktop Navigation -->
+			<div class="hidden md:flex items-center space-x-8">
+				<a
+					href="/"
+					class={`nav-link ${currentPath === '/' ? 'nav-link-active' : ''}`}
+				>
+					Inicio
+				</a>
+
+				<a
+					href="/servicios"
+					class={`nav-link ${currentPath === '/servicios' ? 'nav-link-active' : ''}`}
+				>
+					Para Empresas
+				</a>
+
+				<div class="h-5 w-px bg-primary-500/30"></div>
+
+				<a
+					href="/planes"
+					class={`nav-link-highlight ${currentPath === '/planes' ? 'nav-link-highlight-active' : ''}`}
+				>
+					Planes IPTV
+				</a>
+
+				<a
+					href="/contacto"
+					class={`nav-link ${currentPath === '/contacto' ? 'nav-link-active' : ''}`}
+				>
+					Contacto
+				</a>
+
+				<a
+					href="/nosotros"
+					class={`nav-link ${currentPath === '/nosotros' ? 'nav-link-active' : ''}`}
+				>
+					Nosotros
+				</a>
+			</div>
+
+			<!-- CTA Buttons -->
+			<div class="hidden md:flex items-center space-x-4">
+				<a
+					href="https://panel.americaplay.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-secondary-nav"
+				>
+					Acceder al Panel
+				</a>
+
+				<a href="/contacto" class="btn-primary-nav">
+					Comenzar Ahora
+				</a>
+			</div>
+
+			<!-- Mobile Menu Button -->
+			<button
+				id="mobile-menu-button"
+				class="md:hidden p-2 rounded-lg hover:bg-primary-500/10 transition"
+				aria-label="Toggle menu"
+			>
+				<Icon name="menu" class="h-6 w-6 text-white" id="menu-icon" />
+				<Icon name="x" class="h-6 w-6 text-white hidden" id="close-icon" />
+			</button>
+		</div>
+	</div>
+
+	<!-- Mobile Menu Backdrop -->
+	<div id="mobile-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+	<!-- Mobile Drawer Menu -->
+	<div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-dark-900 border-l border-primary-500/20 z-[60] md:hidden transform translate-x-full transition-transform duration-300 ease-out shadow-2xl">
+		<div class="flex flex-col h-full">
+			<!-- Drawer Header -->
+			<div class="flex items-center justify-between p-6 border-b border-primary-500/10">
+				<OptimizedImage
+					src="/images/Logo_redondo.webp"
+					alt="AmericaPlay Logo"
+					width={48}
+					height={48}
+					class="h-12 w-12 rounded-full"
+					loading="eager"
+				/>
+				<button
+					id="close-drawer-button"
+					class="p-2 rounded-lg hover:bg-primary-500/10 transition"
+					aria-label="Cerrar menú"
+				>
+					<Icon name="x" class="h-6 w-6 text-white" />
+				</button>
+			</div>
+
+			<!-- Drawer Links -->
+			<div class="flex-1 overflow-y-auto px-6 pt-8 pb-6 space-y-2">
+				<a href="/" class="mobile-nav-link">Inicio</a>
+				<a href="/servicios" class="mobile-nav-link">Para Empresas</a>
+				<a href="/planes" class="mobile-nav-link-highlight">Planes IPTV</a>
+				<a href="/contacto" class="mobile-nav-link">Contacto</a>
+				<a href="/nosotros" class="mobile-nav-link">Nosotros</a>
+			</div>
+
+			<!-- Drawer Footer CTA -->
+			<div class="p-6 border-t border-primary-500/10 space-y-3">
+				<a
+					href="https://panel.americaplay.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="block btn-secondary-nav text-center"
+				>
+					Acceder al Panel
+				</a>
+				<a href="/contacto" class="block btn-primary-nav text-center">
+					Comenzar Ahora
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<script>
+	// Mobile drawer menu with slide animation
+	(function() {
+		const button = document.getElementById('mobile-menu-button');
+		const menu = document.getElementById('mobile-menu');
+		const backdrop = document.getElementById('mobile-backdrop');
+		const closeButton = document.getElementById('close-drawer-button');
+		const menuIcon = document.getElementById('menu-icon');
+		const closeIcon = document.getElementById('close-icon');
+		const menuLinks = menu?.querySelectorAll('a');
+
+		if (!button || !menu || !backdrop) return;
+
+		let isOpen = false;
+
+		function closeMenu() {
+			isOpen = false;
+			menu.classList.add('translate-x-full');
+			backdrop.classList.add('opacity-0', 'pointer-events-none');
+			menuIcon?.classList.remove('hidden');
+			closeIcon?.classList.add('hidden');
+			document.body.style.overflow = '';
+		}
+
+		function openMenu() {
+			isOpen = true;
+			menu.classList.remove('translate-x-full');
+			backdrop.classList.remove('opacity-0', 'pointer-events-none');
+			menuIcon?.classList.add('hidden');
+			closeIcon?.classList.remove('hidden');
+			document.body.style.overflow = 'hidden';
+		}
+
+		// Toggle menu on button click
+		button.addEventListener('click', () => {
+			if (isOpen) {
+				closeMenu();
+			} else {
+				openMenu();
+			}
+		});
+
+		// Close menu with close button in drawer
+		closeButton?.addEventListener('click', closeMenu);
+
+		// Close menu when clicking backdrop
+		backdrop.addEventListener('click', closeMenu);
+
+		// Close menu when clicking any link
+		menuLinks?.forEach(link => {
+			link.addEventListener('click', closeMenu);
+		});
+
+		// Close menu on escape key
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && isOpen) {
+				closeMenu();
+			}
+		});
+	})();
+</script>

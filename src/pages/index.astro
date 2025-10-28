@@ -1,16 +1,316 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import OptimizedImage from '../components/OptimizedImage.astro';
+import PricingCard from '../components/pricing/PricingCard.astro';
+import FeatureBox from '../components/ui/FeatureBox.astro';
+import Icon from '../components/Icon.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout
+	title="AmericaPlay - Streaming IPTV Premium | +1000 Canales en Vivo"
+	description="Disfruta de más de 1000 canales en vivo, películas, series y deportes con AmericaPlay IPTV. Planes desde $9.99/mes. Calidad HD/4K."
+>
+	<!-- Hero Section -->
+	<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+		<!-- Background Gradient -->
+		<div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-blue-900 to-dark-800"></div>
+
+		<!-- Hexagon Pattern Overlay -->
+		<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"></div>
+
+		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+			<div class="grid lg:grid-cols-2 gap-12 items-center">
+				<!-- Hero Text -->
+				<div class="text-center lg:text-left">
+					<div class="mb-8 flex justify-center lg:justify-start">
+						<OptimizedImage
+							src="/images/Logo_redondo.webp"
+							alt="AmericaPlay Logo"
+							width={120}
+							height={120}
+							class="h-32 w-32 rounded-full shadow-2xl shadow-primary-500/50 ring-4 ring-primary-500/30"
+							loading="eager"
+						/>
+					</div>
+
+					<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+						<span class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+							Televisión Entretenida
+						</span>
+						<br />
+						<span class="text-secondary-400">Sin Límites</span>
+					</h1>
+
+					<p class="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed">
+						Más de 1000 canales, películas, series y deportes en vivo. Calidad HD/4K desde cualquier dispositivo.
+					</p>
+
+					<!-- Hero Banner (Mobile) - Compacto entre secciones -->
+					<div class="lg:hidden mb-8 flex justify-center">
+						<div class="hero-banner-mobile-wrapper">
+							<OptimizedImage
+								src="/images/Banner_hero.webp"
+								alt="AmericaPlay Streaming"
+								width={400}
+								height={300}
+								class="hero-banner-mobile"
+								loading="eager"
+							/>
+						</div>
+					</div>
+
+					<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+						<a href="#planes" class="btn-primary">
+							Ver Planes
+						</a>
+						<a href="/contacto" class="btn-secondary">
+							Prueba Gratis 24h
+						</a>
+					</div>
+
+					<p class="mt-6 text-primary-300 text-sm">
+						Precio de lanzamiento desde <span class="font-bold text-secondary-400 text-lg">$9.99/mes</span>
+					</p>
+				</div>
+
+				<!-- Hero Banner (Desktop) -->
+				<div class="hidden lg:flex justify-center items-center">
+					<div class="hero-banner-wrapper">
+						<OptimizedImage
+							src="/images/Banner_hero.webp"
+							alt="AmericaPlay Streaming"
+							width={600}
+							height={500}
+							class="hero-banner"
+							loading="eager"
+						/>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Por qué AmericaPlay -->
+	<section class="py-20 bg-blue-900/30">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					¿Por Qué Elegirnos?
+				</h2>
+				<p class="text-xl text-white/70 max-w-2xl mx-auto">
+					No solo ofrecemos streaming, creamos experiencias de entretenimiento inolvidables
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="zap" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Experiencia Comprobada</h3>
+					<p class="text-white/70">Años especializados en streaming IPTV de alto rendimiento y calidad superior</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="sparkles" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Interfaz Excepcional</h3>
+					<p class="text-white/70">Plataforma intuitiva que tus usuarios amarán desde el primer momento</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="wrench" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Soporte 24/7</h3>
+					<p class="text-white/70">Estamos contigo en cada paso, antes, durante y después de tu suscripción</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="palette" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Tecnología de Punta</h3>
+					<p class="text-white/70">Usamos las últimas tecnologías para garantizar calidad y rendimiento</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Planes IPTV -->
+	<section id="planes" class="py-20 bg-gradient-to-br from-dark-900 to-dark-800 relative overflow-hidden">
+		<!-- Gradient Overlay -->
+		<div class="absolute inset-0 bg-gradient-to-b from-primary-500/5 to-transparent pointer-events-none"></div>
+
+		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold mb-4">
+					<span class="text-secondary-400">America</span><span class="text-white">Play</span> IPTV Premium
+				</h2>
+				<p class="text-xl text-white/70 max-w-2xl mx-auto">
+					Más de 1000 canales, películas, series y deportes en vivo. Elige el plan perfecto para ti.
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<PricingCard
+					name="Plan Mensual"
+					duration="Facturación mensual"
+					price="9.99"
+					period="por mes"
+					devices="3 dispositivos simultáneos"
+					features={[
+						'+1000 canales en vivo',
+						'+90 canales deportivos',
+						'Películas, series y animes',
+						'Zona Kids protegida',
+						'Calidad HD/4K',
+						'Contenido adultos +18'
+					]}
+				/>
+
+				<PricingCard
+					name="Plan 3 Meses"
+					duration="Ahorra 15%"
+					price="25.99"
+					period="por 3 meses"
+					devices="3 dispositivos simultáneos"
+					features={[
+						'+1000 canales en vivo',
+						'+90 canales deportivos',
+						'Películas, series y animes',
+						'Zona Kids protegida',
+						'Calidad HD/4K',
+						'Contenido adultos +18'
+					]}
+				/>
+
+				<PricingCard
+					name="Plan Anual"
+					duration="Ahorra 40% - Mejor valor"
+					price="79.99"
+					period="por año completo"
+					devices="5 dispositivos simultáneos"
+					popular={true}
+					features={[
+						'+1000 canales en vivo',
+						'+90 canales deportivos',
+						'Películas, series y animes',
+						'Zona Kids protegida',
+						'Calidad HD/4K',
+						'Contenido adultos +18',
+						'Soporte prioritario 24/7'
+					]}
+				/>
+
+				<PricingCard
+					name="Plan 6 Meses"
+					duration="Ahorra 25%"
+					price="49.99"
+					period="por 6 meses"
+					devices="3 dispositivos simultáneos"
+					features={[
+						'+1000 canales en vivo',
+						'+90 canales deportivos',
+						'Películas, series y animes',
+						'Zona Kids protegida',
+						'Calidad HD/4K',
+						'Contenido adultos +18'
+					]}
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Qué Incluye -->
+	<section class="py-20 bg-blue-900/30">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					¿Qué Incluye AmericaPlay?
+				</h2>
+				<p class="text-xl text-white/70">
+					Todo el entretenimiento que necesitas en un solo lugar
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<FeatureBox
+					icon="film"
+					title="Películas"
+					description="Miles de películas en HD y 4K. Desde clásicos hasta los últimos estrenos del cine."
+				/>
+
+				<FeatureBox
+					icon="tv"
+					title="Series de TV"
+					description="Las mejores series del momento con nuevos episodios cada semana."
+				/>
+
+				<FeatureBox
+					icon="baby"
+					title="Kids Zone"
+					description="Contenido seguro y educativo para los más pequeños del hogar."
+				/>
+
+				<FeatureBox
+					icon="trophy"
+					title="Deportes en Vivo"
+					description="+90 canales deportivos. No te pierdas ningún partido o evento importante."
+				/>
+
+				<FeatureBox
+					icon="smartphone"
+					title="Multi-dispositivo"
+					description="Ve en Smart TV, celular, tablet, PC o cualquier dispositivo."
+				/>
+
+				<FeatureBox
+					icon="globe"
+					title="Sin Restricciones"
+					description="Acceso desde cualquier lugar del mundo, sin bloqueos regionales."
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Reseller CTA -->
+	<section class="py-16 bg-gradient-to-r from-secondary-400/20 to-secondary-400/10 border-y-2 border-secondary-400/30">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h3 class="text-3xl font-bold text-secondary-400 mb-4">
+				Únete a Nuestro Programa de Resellers
+			</h3>
+			<p class="text-xl text-white/80 mb-8">
+				Maximiza tus ganancias revendiendo nuestros servicios premium. Comisiones atractivas y soporte completo.
+			</p>
+			<a href="/contacto" class="btn-primary">
+				Quiero Ser Reseller
+			</a>
+		</div>
+	</section>
+
+	<!-- CTA Final -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-blue-900 relative overflow-hidden">
+		<div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.2) 0%, transparent 70%);"></div>
+
+		<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+				¿Listo Para Comenzar?
+			</h2>
+			<p class="text-xl text-white/80 mb-8">
+				Únete a miles de usuarios satisfechos y disfruta del mejor streaming IPTV
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contacto" class="btn-primary">
+					Contactar Ahora
+				</a>
+				<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+					WhatsApp
+				</a>
+			</div>
+		</div>
+	</section>
+</MainLayout>
+

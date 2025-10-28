@@ -1,0 +1,69 @@
+---
+import Icon from '../Icon.astro';
+
+interface Props {
+	name: string;
+	duration: string;
+	price: string;
+	period: string;
+	features: string[];
+	popular?: boolean;
+	devices?: string;
+	highlight?: string;
+}
+
+const {
+	name,
+	duration,
+	price,
+	period,
+	features,
+	popular = false,
+	devices = '3 dispositivos simultáneos',
+	highlight = 'Precio de lanzamiento'
+} = Astro.props;
+---
+
+<div class={`pricing-card ${popular ? 'pricing-card-popular' : ''}`}>
+	{popular && (
+		<span class="popular-badge">
+			MÁS POPULAR
+		</span>
+	)}
+
+	<div class="pricing-header">
+		<h3 class="pricing-name">{name}</h3>
+		<p class="pricing-duration">{duration}</p>
+	</div>
+
+	<div class="pricing-price">
+		<div class="price-amount">
+			<span class="price-currency">$</span>{price}
+		</div>
+		<span class="price-period">{period}</span>
+
+		<div class="launch-price">
+			<span class="launch-price-text">{highlight}</span>
+		</div>
+	</div>
+
+	<ul class="pricing-features">
+		<li>
+			<Icon name="check" class="feature-icon" />
+			<span>{devices}</span>
+		</li>
+		{features.map((feature) => (
+			<li>
+				<Icon name="check" class="feature-icon" />
+				<span>{feature}</span>
+			</li>
+		))}
+	</ul>
+
+	<a
+		href="/contacto"
+		class={`btn-plan ${popular ? 'btn-plan-popular' : ''}`}
+	>
+		Contratar Ahora
+	</a>
+</div>

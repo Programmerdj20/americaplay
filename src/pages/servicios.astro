@@ -1,0 +1,390 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<MainLayout
+	title="Servicios B2B - Plataformas OTT/IPTV y Desarrollo | AmericaPlay"
+	description="Soluciones tecnológicas empresariales. Creamos plataformas OTT/IPTV personalizadas, desarrollo web y móvil, y sistemas empresariales robustos."
+>
+	<!-- Hero Section -->
+	<section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
+		<div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-blue-900 to-dark-800"></div>
+		<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"></div>
+
+		<div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+				<span class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+					Soluciones Tecnológicas
+				</span>
+				<br />
+				<span class="text-secondary-400">Para Empresas</span>
+			</h1>
+
+			<p class="text-xl md:text-2xl text-white/80 mb-8 max-w-4xl mx-auto leading-relaxed">
+				Transformamos tu visión en realidad. Plataformas OTT/IPTV, desarrollo web y móvil, y soluciones empresariales de alto rendimiento.
+			</p>
+
+			<div class="flex flex-wrap justify-center gap-4 text-white/70 mb-8">
+				<div class="flex items-center gap-2">
+					<Icon name="rocket" class="h-5 w-5 text-primary-400" />
+					<span>Entrega Rápida</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<Icon name="shield" class="h-5 w-5 text-primary-400" />
+					<span>Código de Calidad</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<Icon name="users" class="h-5 w-5 text-primary-400" />
+					<span>Equipo Experto</span>
+				</div>
+			</div>
+
+			<a href="/contacto" class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-primary-500/50 hover:-translate-y-1 inline-block">
+				Solicitar Cotización
+			</a>
+		</div>
+	</section>
+
+	<!-- Main Services -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-dark-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Nuestros Servicios
+				</h2>
+				<p class="text-xl text-white/70 max-w-2xl mx-auto">
+					Soluciones tecnológicas completas para impulsar tu negocio
+				</p>
+			</div>
+
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- Service 1: OTT/IPTV -->
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mb-6">
+						<Icon name="tv" class="h-10 w-10 text-dark-900" />
+					</div>
+
+					<h3 class="text-3xl font-bold text-white mb-4">Plataformas OTT/IPTV</h3>
+
+					<p class="text-white/70 text-lg mb-6 leading-relaxed">
+						Crea tu propia plataforma de streaming profesional. Sistema completo con panel administrativo, aplicaciones móviles y web player.
+					</p>
+
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Panel de administración completo con gestión de contenido, usuarios y estadísticas</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Aplicaciones nativas para Android TV, Fire Stick, iOS y Android</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Web player responsivo compatible con todos los dispositivos</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Sistema de pagos integrado y gestión de suscripciones</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">CDN optimizado para streaming de alta calidad</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Soporte para live streaming y contenido on-demand</span>
+						</li>
+					</ul>
+
+					<a href="/contacto" class="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold transition-colors group">
+						<span>Más información</span>
+						<Icon name="arrow-right" class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+					</a>
+				</div>
+
+				<!-- Service 2: Web & Mobile Development -->
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-20 h-20 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full flex items-center justify-center mb-6">
+						<Icon name="code" class="h-10 w-10 text-dark-900" />
+					</div>
+
+					<h3 class="text-3xl font-bold text-white mb-4">Desarrollo Web & Móvil</h3>
+
+					<p class="text-white/70 text-lg mb-6 leading-relaxed">
+						Aplicaciones web y móviles modernas, rápidas y escalables. Desde landing pages hasta sistemas complejos.
+					</p>
+
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-secondary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Sitios web corporativos y landing pages de alto impacto</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-secondary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">E-commerce completo con carrito, pagos y gestión de inventario</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-secondary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Aplicaciones móviles nativas (iOS y Android) o híbridas</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-secondary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Progressive Web Apps (PWA) para experiencia móvil superior</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-secondary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Integración con APIs, bases de datos y servicios externos</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-secondary-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">SEO optimizado y performance de primera clase</span>
+						</li>
+					</ul>
+
+					<a href="/contacto" class="inline-flex items-center gap-2 text-secondary-400 hover:text-secondary-300 font-semibold transition-colors group">
+						<span>Más información</span>
+						<Icon name="arrow-right" class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+					</a>
+				</div>
+
+				<!-- Service 3: Enterprise Solutions -->
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-20 h-20 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center mb-6">
+						<Icon name="building-2" class="h-10 w-10 text-dark-900" />
+					</div>
+
+					<h3 class="text-3xl font-bold text-white mb-4">Soluciones Empresariales</h3>
+
+					<p class="text-white/70 text-lg mb-6 leading-relaxed">
+						Sistemas empresariales robustos y escalables. CRM, ERP, dashboards analíticos y automatización de procesos.
+					</p>
+
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-accent-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">CRM personalizado para gestión de clientes y ventas</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-accent-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">ERP para optimización de recursos empresariales</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-accent-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Dashboards analíticos con visualización de datos en tiempo real</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-accent-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Automatización de procesos y workflows empresariales</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-accent-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Integración con sistemas existentes y migración de datos</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-accent-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Capacitación y documentación técnica completa</span>
+						</li>
+					</ul>
+
+					<a href="/contacto" class="inline-flex items-center gap-2 text-accent-400 hover:text-accent-300 font-semibold transition-colors group">
+						<span>Más información</span>
+						<Icon name="arrow-right" class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+					</a>
+				</div>
+
+				<!-- Service 4: Custom Development -->
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
+					<div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6">
+						<Icon name="wrench" class="h-10 w-10 text-white" />
+					</div>
+
+					<h3 class="text-3xl font-bold text-white mb-4">Desarrollo a Medida</h3>
+
+					<p class="text-white/70 text-lg mb-6 leading-relaxed">
+						Soluciones personalizadas para necesidades específicas. Si lo puedes imaginar, lo podemos construir.
+					</p>
+
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-blue-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">APIs RESTful y GraphQL para integración de servicios</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-blue-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Microservicios escalables con arquitectura moderna</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-blue-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Bots y automatizaciones para WhatsApp, Telegram y más</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-blue-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Scraping de datos y procesamiento automatizado</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-blue-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Sistemas de reservas, booking y gestión de turnos</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<Icon name="check-circle" class="h-6 w-6 text-blue-400 flex-shrink-0 mt-0.5" />
+							<span class="text-white/80">Cualquier proyecto tecnológico que necesites</span>
+						</li>
+					</ul>
+
+					<a href="/contacto" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors group">
+						<span>Más información</span>
+						<Icon name="arrow-right" class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Us -->
+	<section class="py-20 bg-blue-900/30">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					¿Por Qué Trabajar Con Nosotros?
+				</h2>
+				<p class="text-xl text-white/70">
+					Tu socio tecnológico de confianza
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="zap" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Entrega Ágil</h3>
+					<p class="text-white/70">Metodologías ágiles para entregas rápidas y eficientes. Sprints cortos con resultados tangibles.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="shield" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Código de Calidad</h3>
+					<p class="text-white/70">Estándares de desarrollo profesionales. Testing, documentación y mejores prácticas garantizadas.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="trending-up" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Escalabilidad</h3>
+					<p class="text-white/70">Soluciones que crecen con tu negocio. Arquitectura pensada para el largo plazo.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="headphones" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Soporte Continuo</h3>
+					<p class="text-white/70">Mantenimiento y soporte post-lanzamiento. Estamos contigo después de la entrega.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Process -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-dark-800">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Nuestro Proceso
+				</h2>
+				<p class="text-xl text-white/70">
+					Metodología probada para proyectos exitosos
+				</p>
+			</div>
+
+			<div class="space-y-8">
+				<div class="flex gap-6 items-start">
+					<div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-xl">
+						1
+					</div>
+					<div>
+						<h3 class="text-2xl font-bold text-white mb-2">Descubrimiento</h3>
+						<p class="text-white/70 leading-relaxed">
+							Reunión inicial para entender tus necesidades, objetivos y visión. Análisis de requerimientos técnicos y funcionales.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-6 items-start">
+					<div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-xl">
+						2
+					</div>
+					<div>
+						<h3 class="text-2xl font-bold text-white mb-2">Planificación</h3>
+						<p class="text-white/70 leading-relaxed">
+							Diseño de arquitectura, wireframes y especificaciones técnicas. Cotización detallada y cronograma de trabajo.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-6 items-start">
+					<div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-xl">
+						3
+					</div>
+					<div>
+						<h3 class="text-2xl font-bold text-white mb-2">Desarrollo</h3>
+						<p class="text-white/70 leading-relaxed">
+							Sprints de desarrollo con entregas parciales. Testing continuo y feedback constante para ajustes en tiempo real.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-6 items-start">
+					<div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-xl">
+						4
+					</div>
+					<div>
+						<h3 class="text-2xl font-bold text-white mb-2">Lanzamiento</h3>
+						<p class="text-white/70 leading-relaxed">
+							Deployment a producción, capacitación de usuarios y entrega de documentación técnica completa.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-6 items-start">
+					<div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-xl">
+						5
+					</div>
+					<div>
+						<h3 class="text-2xl font-bold text-white mb-2">Soporte</h3>
+						<p class="text-white/70 leading-relaxed">
+							Mantenimiento continuo, actualizaciones y mejoras. Soporte técnico para garantizar el éxito del proyecto.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-blue-900 relative overflow-hidden">
+		<div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.2) 0%, transparent 70%);"></div>
+
+		<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+				¿Tienes Un Proyecto En Mente?
+			</h2>
+			<p class="text-xl text-white/80 mb-8">
+				Conversemos sobre cómo podemos ayudarte a llevarlo a la realidad. Consulta sin compromiso.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contacto" class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-primary-500/50 hover:-translate-y-1 inline-block">
+					Solicitar Cotización
+				</a>
+				<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="border-2 border-secondary-400 text-secondary-400 hover:bg-secondary-400 hover:text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-secondary-400/50 hover:-translate-y-1 inline-block">
+					WhatsApp
+				</a>
+			</div>
+		</div>
+	</section>
+</MainLayout>

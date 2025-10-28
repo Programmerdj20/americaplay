@@ -1,0 +1,105 @@
+---
+import Icon from '../Icon.astro';
+
+const faqs = [
+	{
+		question: '¿Qué es un reseller de IPTV?',
+		answer: 'Un reseller es un socio comercial que compra créditos al mayoreo y los revende a usuarios finales. Obtienes acceso a un panel administrativo donde gestionas tus clientes, generas cuentas y controlas tu negocio de streaming.'
+	},
+	{
+		question: '¿Cómo funcionan los créditos?',
+		answer: 'Cada crédito equivale a una suscripción IPTV de un mes. Compras un paquete de créditos según tu plan y los distribuyes a tus clientes. Por ejemplo, con 50 créditos puedes crear 50 cuentas de 1 mes, o 25 cuentas de 2 meses, según tu estrategia.'
+	},
+	{
+		question: '¿Los créditos tienen fecha de vencimiento?',
+		answer: 'No. Una vez adquiridos, tus créditos no vencen. Puedes usarlos cuando quieras y administrar tu inventario sin presión de tiempo. Esta es una de nuestras ventajas competitivas principales.'
+	},
+	{
+		question: '¿Qué diferencia hay entre Reseller y Super Reseller?',
+		answer: 'Los planes Reseller (Jr, Md, Sr) son ideales para comenzar tu negocio. Los Super Reseller (Bronce, Plata, Oro) incluyen la capacidad de revender paneles completos a otros revendedores, permitiéndote crear tu propia red de distribución.'
+	},
+	{
+		question: '¿Cómo accedo al panel administrativo?',
+		answer: 'Una vez contratado tu plan, recibirás credenciales de acceso a tu panel web. Desde ahí puedes crear cuentas, generar códigos, ver estadísticas de uso, gestionar clientes y monitorear tu negocio desde cualquier dispositivo.'
+	},
+	{
+		question: '¿Qué soporte técnico recibo?',
+		answer: 'Todos los planes incluyen soporte técnico 24/7 por WhatsApp, email y teléfono. Además, recibes capacitación inicial sobre el uso del panel, materiales de marketing y asesoría comercial para maximizar tus ventas.'
+	},
+	{
+		question: '¿Puedo cambiar de plan más adelante?',
+		answer: 'Sí. Puedes actualizar (upgrade) a un plan superior en cualquier momento y se ajustará el pago proporcional. Los créditos de tu plan anterior se mantienen y se suman a los del nuevo plan.'
+	},
+	{
+		question: '¿Cuánto puedo ganar como reseller?',
+		answer: 'Las ganancias dependen de tu estrategia comercial y volumen de ventas. En promedio, nuestros resellers obtienen márgenes del 50-100% sobre su inversión. Usa nuestra calculadora para estimar tu potencial de ingresos según tu plan.'
+	},
+	{
+		question: '¿Necesito conocimientos técnicos?',
+		answer: 'No. El panel es completamente intuitivo y fácil de usar. Proporcionamos tutoriales en video, documentación paso a paso y soporte constante. Si sabes usar WhatsApp, puedes gestionar tu negocio de reseller sin problemas.'
+	},
+	{
+		question: '¿Qué métodos de pago aceptan?',
+		answer: 'Aceptamos pagos mediante transferencia bancaria, PayPal, Binance, y principales criptomonedas. Los pagos son mensuales y puedes configurar renovación automática para mayor comodidad.'
+	}
+];
+---
+
+<div class="reseller-faq">
+	<div class="text-center mb-12">
+		<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+			Preguntas Frecuentes
+		</h2>
+		<p class="text-xl text-white/70">
+			Todo lo que necesitas saber sobre nuestro programa de resellers
+		</p>
+	</div>
+
+	<div class="max-w-4xl mx-auto space-y-4">
+		{faqs.map((faq, index) => (
+			<div class="faq-item bg-dark-800/60 border border-primary-500/20 rounded-xl overflow-hidden transition-all hover:border-primary-500/40">
+				<button
+					class="faq-question w-full text-left p-6 flex justify-between items-center gap-4"
+					data-faq-index={index}
+				>
+					<span class="font-bold text-white text-lg">{faq.question}</span>
+					<Icon name="chevron-down" class="h-6 w-6 text-primary-400 flex-shrink-0 faq-icon transition-transform" />
+				</button>
+				<div class="faq-answer hidden p-6 pt-0 text-white/70 leading-relaxed">
+					{faq.answer}
+				</div>
+			</div>
+		))}
+	</div>
+</div>
+
+<script>
+	(function() {
+		const faqButtons = document.querySelectorAll('.faq-question');
+
+		faqButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const faqItem = button.closest('.faq-item');
+				const answer = faqItem?.querySelector('.faq-answer');
+				const icon = button.querySelector('.faq-icon');
+
+				// Toggle current item
+				const isHidden = answer?.classList.contains('hidden');
+
+				if (isHidden) {
+					answer?.classList.remove('hidden');
+					icon?.classList.add('rotate-180');
+				} else {
+					answer?.classList.add('hidden');
+					icon?.classList.remove('rotate-180');
+				}
+			});
+		});
+	})();
+</script>
+
+<style>
+	.faq-icon {
+		transition: transform 0.3s ease;
+	}
+</style>

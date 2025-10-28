@@ -1,0 +1,79 @@
+---
+import Icon from '../Icon.astro';
+
+interface Props {
+	name: string;
+	credits: number;
+	price: string;
+	canResellPanel: boolean;
+	popular?: boolean;
+	tier?: 'reseller' | 'super-reseller';
+}
+
+const {
+	name,
+	credits,
+	price,
+	canResellPanel,
+	popular = false,
+	tier = 'reseller'
+} = Astro.props;
+
+const features = [
+	`${credits} créditos mensuales`,
+	'Panel administrativo completo',
+	'Demostraciones ilimitadas',
+	'Créditos sin vencimiento',
+	'Soporte técnico 24/7',
+	'Reportes de ventas',
+	...(canResellPanel ? ['Capacidad de reventa de paneles'] : [])
+];
+---
+
+<div class={`reseller-card ${popular ? 'reseller-card-popular' : ''} ${tier === 'super-reseller' ? 'reseller-card-premium' : ''}`}>
+	{popular && (
+		<span class="popular-badge">
+			MÁS POPULAR
+		</span>
+	)}
+
+	{tier === 'super-reseller' && (
+		<div class="premium-badge">
+			<Icon name="shield-check" class="h-4 w-4" />
+			<span>PANEL DE REVENTA</span>
+		</div>
+	)}
+
+	<div class="pricing-header">
+		<h3 class="pricing-name">{name}</h3>
+		<p class="reseller-credits">{credits} créditos</p>
+	</div>
+
+	<div class="pricing-price">
+		<div class="price-amount">
+			<span class="price-currency">$</span>{price}
+		</div>
+		<span class="price-period">por mes</span>
+
+		<div class="profit-indicator">
+			<Icon name="trending-up" class="h-4 w-4 text-secondary-400" />
+			<span class="profit-text">Ganancia potencial: hasta 100%</span>
+		</div>
+	</div>
+
+	<ul class="pricing-features">
+		{features.map((feature) => (
+			<li>
+				<Icon name="check" class="feature-icon" />
+				<span>{feature}</span>
+			</li>
+		))}
+	</ul>
+
+	<a
+		href="/contacto"
+		class={`btn-plan ${popular ? 'btn-plan-popular' : tier === 'super-reseller' ? 'btn-plan-premium' : ''}`}
+	>
+		Contratar Ahora
+	</a>
+</div>

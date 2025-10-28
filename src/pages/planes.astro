@@ -1,0 +1,420 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import PricingCard from '../components/pricing/PricingCard.astro';
+import FeatureBox from '../components/ui/FeatureBox.astro';
+import Icon from '../components/Icon.astro';
+import ResellerPricingCard from '../components/reseller/ResellerPricingCard.astro';
+---
+
+<MainLayout
+	title="Planes IPTV Premium - AmericaPlay | Streaming desde $9.99/mes"
+	description="Elige tu plan IPTV perfecto. +1000 canales en vivo, películas, series y deportes. Planes desde $9.99/mes con calidad HD/4K. Prueba gratis 24h."
+>
+	<!-- Hero Section -->
+	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
+		<!-- Background Gradient -->
+		<div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-blue-900 to-dark-800"></div>
+
+		<!-- Pattern Overlay -->
+		<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"></div>
+
+		<div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+				<span class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+					Planes IPTV
+				</span>
+				<br />
+				<span class="text-secondary-400">Premium</span>
+			</h1>
+
+			<p class="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+				Más de 1000 canales, películas, series y deportes en vivo. Elige el plan perfecto para ti y tu familia.
+			</p>
+
+			<div class="flex flex-wrap justify-center gap-4 text-white/70">
+				<div class="flex items-center gap-2">
+					<Icon name="shield" class="h-5 w-5 text-primary-400" />
+					<span>Pago Seguro</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<Icon name="clock" class="h-5 w-5 text-primary-400" />
+					<span>Activación Inmediata</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<Icon name="headphones" class="h-5 w-5 text-primary-400" />
+					<span>Soporte 24/7</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pricing Plans -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-dark-800 relative overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-b from-primary-500/5 to-transparent pointer-events-none"></div>
+
+		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+					Elige Tu Plan Perfecto
+				</h2>
+				<p class="text-xl text-white/70 max-w-2xl mx-auto">
+					Todos los planes incluyen acceso completo a nuestro catálogo premium
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+				<PricingCard
+					name="Plan Mensual"
+					duration="Facturación mensual"
+					price="9.99"
+					period="por mes"
+					devices="3 dispositivos simultáneos"
+					highlight="Ideal para probar"
+					features={[
+						'+1000 canales en vivo',
+						'+90 canales deportivos',
+						'Películas y series HD/4K',
+						'Zona Kids protegida',
+						'Contenido adultos +18',
+						'Soporte técnico 24/7'
+					]}
+				/>
+
+				<PricingCard
+					name="Plan 3 Meses"
+					duration="Ahorra 15%"
+					price="25.99"
+					period="por 3 meses"
+					devices="3 dispositivos simultáneos"
+					highlight="Mejor relación calidad-precio"
+					features={[
+						'+1000 canales en vivo',
+						'+90 canales deportivos',
+						'Películas y series HD/4K',
+						'Zona Kids protegida',
+						'Contenido adultos +18',
+						'Soporte prioritario 24/7'
+					]}
+				/>
+
+				<PricingCard
+					name="Plan Anual"
+					duration="Ahorra 40% - Mejor valor"
+					price="79.99"
+					period="por año completo"
+					devices="5 dispositivos simultáneos"
+					popular={true}
+					highlight="Más popular"
+					features={[
+						'+1000 canales en vivo',
+						'+90 canales deportivos',
+						'Películas y series HD/4K',
+						'Zona Kids protegida',
+						'Contenido adultos +18',
+						'Soporte VIP prioritario',
+						'Actualizaciones incluidas',
+						'Garantía de satisfacción'
+					]}
+				/>
+
+				<PricingCard
+					name="Plan 6 Meses"
+					duration="Ahorra 25%"
+					price="49.99"
+					period="por 6 meses"
+					devices="3 dispositivos simultáneos"
+					highlight="Equilibrio perfecto"
+					features={[
+						'+1000 canales en vivo',
+						'+90 canales deportivos',
+						'Películas y series HD/4K',
+						'Zona Kids protegida',
+						'Contenido adultos +18',
+						'Soporte prioritario 24/7',
+						'Actualizaciones incluidas'
+					]}
+				/>
+			</div>
+
+			<!-- Comparison Note -->
+			<div class="bg-blue-900/30 border border-primary-500/20 rounded-2xl p-8 text-center">
+				<Icon name="award" class="h-12 w-12 text-secondary-400 mx-auto mb-4" />
+				<h3 class="text-2xl font-bold text-white mb-3">
+					Todos los planes incluyen
+				</h3>
+				<p class="text-white/70 max-w-3xl mx-auto">
+					Acceso completo a todos los canales, películas, series y deportes. Sin contratos, cancela cuando quieras. Garantía de satisfacción de 7 días.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- What's Included -->
+	<section class="py-20 bg-blue-900/30">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Contenido Incluido
+				</h2>
+				<p class="text-xl text-white/70 max-w-2xl mx-auto">
+					Acceso ilimitado a miles de horas de entretenimiento
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<FeatureBox
+					icon="tv"
+					title="Canales en Vivo"
+					description="Más de 1000 canales de televisión en vivo de todo el mundo. Noticias, entretenimiento, música y más."
+				/>
+
+				<FeatureBox
+					icon="film"
+					title="Películas Premium"
+					description="Miles de películas en HD y 4K. Desde clásicos hasta los últimos estrenos del cine mundial."
+				/>
+
+				<FeatureBox
+					icon="monitor"
+					title="Series de TV"
+					description="Las mejores series del momento con nuevos episodios cada semana. Binge-watching garantizado."
+				/>
+
+				<FeatureBox
+					icon="trophy"
+					title="Deportes en Vivo"
+					description="+90 canales deportivos. Fútbol, NBA, NFL, UFC, boxeo y todos los eventos deportivos importantes."
+				/>
+
+				<FeatureBox
+					icon="baby"
+					title="Kids Zone"
+					description="Contenido seguro y educativo para los más pequeños. Control parental incluido."
+				/>
+
+				<FeatureBox
+					icon="smartphone"
+					title="Multi-dispositivo"
+					description="Ve en Smart TV, celular, tablet, PC, Fire Stick, Roku y más. Donde quieras, cuando quieras."
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Benefits Section -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-dark-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					¿Por Qué Elegirnos?
+				</h2>
+				<p class="text-xl text-white/70">
+					La mejor experiencia de streaming IPTV del mercado
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="zap" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Activación Inmediata</h3>
+					<p class="text-white/70">Recibe tus credenciales al instante. Comienza a disfrutar en minutos.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="shield" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Pago 100% Seguro</h3>
+					<p class="text-white/70">Métodos de pago confiables. Tus datos siempre protegidos.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="globe" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Sin Restricciones</h3>
+					<p class="text-white/70">Acceso desde cualquier país. Sin bloqueos regionales.</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<Icon name="headphones" class="h-10 w-10 text-dark-900" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Soporte 24/7</h3>
+					<p class="text-white/70">Equipo disponible siempre que lo necesites por WhatsApp y email.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="py-20 bg-blue-900/30">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+					Preguntas Frecuentes
+				</h2>
+				<p class="text-xl text-white/70">
+					Resuelve tus dudas antes de contratar
+				</p>
+			</div>
+
+			<div class="space-y-6">
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Cómo funciona la prueba gratis?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Contáctanos y te proporcionaremos un acceso de prueba de 24 horas totalmente gratis. Podrás probar todos nuestros canales y contenido antes de decidir.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿En qué dispositivos funciona?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Compatible con Smart TV (Samsung, LG, Android TV), Fire Stick, Roku, celulares Android/iOS, tablets, PC Windows/Mac, y más. Si tiene conexión a internet, funciona.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Qué velocidad de internet necesito?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Recomendamos mínimo 10 Mbps para HD y 25 Mbps para 4K. Con una conexión estable podrás disfrutar sin interrupciones.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Puedo cancelar en cualquier momento?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Sí, sin compromisos ni penalizaciones. Aunque estamos seguros de que amarás nuestro servicio.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Cómo realizo el pago?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Aceptamos transferencias bancarias, PayPal, criptomonedas y otros métodos seguros. Te enviaremos las instrucciones al contactarnos.
+					</p>
+				</div>
+
+				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
+					<h3 class="text-xl font-bold text-white mb-3">¿Ofrecen garantía?</h3>
+					<p class="text-white/70 leading-relaxed">
+						Sí, garantía de satisfacción de 7 días. Si no estás satisfecho, te devolvemos tu dinero sin preguntas.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Programa Reseller -->
+	<section class="py-20 bg-gradient-to-br from-secondary-900/20 to-dark-900 border-y-2 border-secondary-400/30">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<span class="inline-block px-4 py-2 bg-secondary-400/20 border border-secondary-400/30 rounded-full text-secondary-400 font-semibold text-sm mb-4">
+					PROGRAMA DE RESELLERS
+				</span>
+				<h2 class="text-4xl md:text-5xl font-bold mb-4">
+					<span class="text-white">¿Quieres </span>
+					<span class="text-secondary-400">Revender</span>
+					<span class="text-white"> IPTV?</span>
+				</h2>
+				<p class="text-xl text-white/70 max-w-2xl mx-auto mb-8">
+					Genera ingresos recurrentes con nuestro programa de resellers. Créditos sin vencimiento y ganancias de hasta 100%.
+				</p>
+			</div>
+
+			<!-- Beneficios -->
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+				<div class="benefit-card">
+					<div class="benefit-icon-wrapper">
+						<Icon name="dollar-sign" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h3 class="text-lg font-bold text-white mb-2">Desde $66/mes</h3>
+					<p class="text-white/70 text-sm">Mínima inversión, máximos resultados</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon-wrapper">
+						<Icon name="clock" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h3 class="text-lg font-bold text-white mb-2">Sin Vencimiento</h3>
+					<p class="text-white/70 text-sm">Tus créditos no expiran nunca</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon-wrapper">
+						<Icon name="trending-up" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h3 class="text-lg font-bold text-white mb-2">Hasta 100% Ganancia</h3>
+					<p class="text-white/70 text-sm">Define tus precios y maximiza ingresos</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon-wrapper">
+						<Icon name="users" class="h-8 w-8 text-dark-900" />
+					</div>
+					<h3 class="text-lg font-bold text-white mb-2">Panel Profesional</h3>
+					<p class="text-white/70 text-sm">Administra tu negocio fácilmente</p>
+				</div>
+			</div>
+
+			<!-- Planes destacados -->
+			<div class="grid md:grid-cols-3 gap-6 mb-8">
+				<ResellerPricingCard
+					name="Reseller Sr"
+					credits={75}
+					price="128"
+					canResellPanel={false}
+					tier="reseller"
+					popular={true}
+				/>
+
+				<ResellerPricingCard
+					name="Super Reseller Plata"
+					credits={200}
+					price="260"
+					canResellPanel={true}
+					tier="super-reseller"
+				/>
+
+				<ResellerPricingCard
+					name="Super Reseller Oro"
+					credits={300}
+					price="330"
+					canResellPanel={true}
+					tier="super-reseller"
+				/>
+			</div>
+
+			<!-- CTA -->
+			<div class="text-center">
+				<a href="/reseller" class="inline-block bg-gradient-to-r from-secondary-400 to-secondary-500 hover:from-secondary-500 hover:to-secondary-600 text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-secondary-400/50 hover:-translate-y-1">
+					Ver Todos los Planes Reseller
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Final -->
+	<section class="py-20 bg-gradient-to-br from-dark-900 to-blue-900 relative overflow-hidden">
+		<div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.2) 0%, transparent 70%);"></div>
+
+		<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+				¿Listo Para Comenzar?
+			</h2>
+			<p class="text-xl text-white/80 mb-8">
+				Prueba gratis 24 horas sin compromiso. Comienza a disfrutar hoy mismo.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contacto" class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-primary-500/50 hover:-translate-y-1 inline-block">
+					Solicitar Prueba Gratis
+				</a>
+				<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="border-2 border-secondary-400 text-secondary-400 hover:bg-secondary-400 hover:text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-secondary-400/50 hover:-translate-y-1 inline-block">
+					Contactar por WhatsApp
+				</a>
+			</div>
+		</div>
+	</section>
+</MainLayout>
