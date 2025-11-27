@@ -1,6 +1,6 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import Icon from '../components/Icon.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <MainLayout
@@ -8,22 +8,254 @@ import Icon from '../components/Icon.astro';
 	description="Contáctanos para planes IPTV, servicios empresariales o soporte técnico. Disponibles 24/7 por WhatsApp, email y teléfono."
 >
 	<!-- Hero Section -->
-	<section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
-		<div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-blue-900 to-dark-800"></div>
-		<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"></div>
+	<section
+		class="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-32 pb-20"
+	>
+		<div
+			class="absolute inset-0 bg-gradient-to-br from-dark-900 via-blue-900 to-dark-800"
+		>
+		</div>
+		<div
+			class="absolute inset-0 opacity-10"
+			style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"
+		>
+		</div>
 
-		<div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
-				<span class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+		<div
+			class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+		>
+			<h1
+				class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight"
+			>
+				<span
+					class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent"
+				>
 					Estamos Para
 				</span>
 				<br />
 				<span class="text-secondary-400">Ayudarte</span>
 			</h1>
 
-			<p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-				Contáctanos para planes IPTV, servicios empresariales o cualquier consulta. Respuesta garantizada en menos de 24 horas.
+			<p
+				class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed"
+			>
+				Contacta a cualquiera de nuestros distribuidores para planes
+				IPTV, servicios empresariales o cualquier consulta. Respuesta
+				garantizada en menos de 24 horas.
 			</p>
+		</div>
+	</section>
+
+	<!-- Distribuidores Section -->
+	<section
+		id="distribuidores"
+		class="py-20 relative overflow-hidden bg-dark-900"
+	>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-5xl font-bold mb-6">
+					<span
+						class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent"
+					>
+						Contacto y Distribuidores
+					</span>
+				</h2>
+				<p class="text-white/70 text-lg max-w-2xl mx-auto">
+					Encuentra tu distribuidor local de Oleada TV en tu país.
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<!-- Columna 1 -->
+				<div class="space-y-6">
+					<!-- Chile -->
+					<div
+						class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 hover:border-primary-500 transition-all hover:shadow-lg hover:shadow-primary-500/10 group"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex items-center gap-4">
+								<span class="text-3xl">🇨🇱</span>
+								<h3 class="text-xl font-bold text-white">
+									Chile
+								</h3>
+							</div>
+						</div>
+						<a
+							href="https://wa.me/56941861833?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20y%20servicios%20de%20America%20Play%20disponibles%20en%20Chile."
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center justify-center gap-2 w-full bg-primary-600/20 hover:bg-primary-600 text-primary-200 hover:text-white border border-primary-500/50 py-3 rounded-lg font-semibold transition-all group-hover:shadow-md"
+						>
+							<Icon name="message-circle" class="w-5 h-5" />
+							Contactar Asesor
+						</a>
+					</div>
+
+					<!-- Colombia -->
+					<div
+						class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 hover:border-primary-500 transition-all hover:shadow-lg hover:shadow-primary-500/10 group"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex items-center gap-4">
+								<span class="text-3xl">🇨🇴</span>
+								<h3 class="text-xl font-bold text-white">
+									Colombia
+								</h3>
+							</div>
+						</div>
+						<a
+							href="https://wa.me/573014034646?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20y%20servicios%20de%20America%20Play%20disponibles%20en%20Colombia."
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center justify-center gap-2 w-full bg-primary-600/20 hover:bg-primary-600 text-primary-200 hover:text-white border border-primary-500/50 py-3 rounded-lg font-semibold transition-all group-hover:shadow-md"
+						>
+							<Icon name="message-circle" class="w-5 h-5" />
+							Contactar Asesor
+						</a>
+					</div>
+
+					<!-- USA -->
+					<div
+						class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 hover:border-primary-500 transition-all hover:shadow-lg hover:shadow-primary-500/10 group"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex items-center gap-4">
+								<span class="text-3xl">🇺🇸</span>
+								<h3 class="text-xl font-bold text-white">
+									Usa
+								</h3>
+							</div>
+						</div>
+						<a
+							href="https://wa.me/573014034646?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20y%20servicios%20de%20America%20Play%20disponibles%20en%20USA."
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center justify-center gap-2 w-full bg-primary-600/20 hover:bg-primary-600 text-primary-200 hover:text-white border border-primary-500/50 py-3 rounded-lg font-semibold transition-all group-hover:shadow-md"
+						>
+							<Icon name="message-circle" class="w-5 h-5" />
+							Contactar Asesor
+						</a>
+					</div>
+
+					<!-- Panama -->
+					<div
+						class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 hover:border-primary-500 transition-all hover:shadow-lg hover:shadow-primary-500/10 group"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex items-center gap-4">
+								<span class="text-3xl">🇵🇦</span>
+								<h3 class="text-xl font-bold text-white">
+									Panama
+								</h3>
+							</div>
+						</div>
+						<a
+							href="https://wa.me/573014034646?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20y%20servicios%20de%20America%20Play%20disponibles%20en%20Panam%C3%A1."
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center justify-center gap-2 w-full bg-primary-600/20 hover:bg-primary-600 text-primary-200 hover:text-white border border-primary-500/50 py-3 rounded-lg font-semibold transition-all group-hover:shadow-md"
+						>
+							<Icon name="message-circle" class="w-5 h-5" />
+							Contactar Asesor
+						</a>
+					</div>
+				</div>
+
+				<!-- Columna 2 -->
+				<div class="space-y-6">
+					<!-- Chile (Alternativo) -->
+					<div
+						class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 hover:border-primary-500 transition-all hover:shadow-lg hover:shadow-primary-500/10 group"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex items-center gap-4">
+								<span class="text-3xl">🇨🇱</span>
+								<h3 class="text-xl font-bold text-white">
+									Chile (Alternativo)
+								</h3>
+							</div>
+						</div>
+						<a
+							href="https://wa.me/56941861833?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20y%20servicios%20de%20America%20Play%20disponibles%20en%20Chile."
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center justify-center gap-2 w-full bg-primary-600/20 hover:bg-primary-600 text-primary-200 hover:text-white border border-primary-500/50 py-3 rounded-lg font-semibold transition-all group-hover:shadow-md"
+						>
+							<Icon name="message-circle" class="w-5 h-5" />
+							Contactar Asesor
+						</a>
+					</div>
+
+					<!-- Usa (Alternativo) -->
+					<div
+						class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 hover:border-primary-500 transition-all hover:shadow-lg hover:shadow-primary-500/10 group"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex items-center gap-4">
+								<span class="text-3xl">🇺🇸</span>
+								<h3 class="text-xl font-bold text-white">
+									Usa (Alternativo)
+								</h3>
+							</div>
+						</div>
+						<a
+							href="https://wa.me/56941861833?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20y%20servicios%20de%20America%20Play%20disponibles%20en%20USA."
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center justify-center gap-2 w-full bg-primary-600/20 hover:bg-primary-600 text-primary-200 hover:text-white border border-primary-500/50 py-3 rounded-lg font-semibold transition-all group-hover:shadow-md"
+						>
+							<Icon name="message-circle" class="w-5 h-5" />
+							Contactar Asesor
+						</a>
+					</div>
+
+					<!-- Ecuador -->
+					<div
+						class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 hover:border-primary-500 transition-all hover:shadow-lg hover:shadow-primary-500/10 group"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex items-center gap-4">
+								<span class="text-3xl">🇪🇨</span>
+								<h3 class="text-xl font-bold text-white">
+									Ecuador
+								</h3>
+							</div>
+						</div>
+						<a
+							href="https://wa.me/56941861833?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20y%20servicios%20de%20America%20Play%20disponibles%20en%20Ecuador."
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center justify-center gap-2 w-full bg-primary-600/20 hover:bg-primary-600 text-primary-200 hover:text-white border border-primary-500/50 py-3 rounded-lg font-semibold transition-all group-hover:shadow-md"
+						>
+							<Icon name="message-circle" class="w-5 h-5" />
+							Contactar Asesor
+						</a>
+					</div>
+
+					<!-- Peru -->
+					<div
+						class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 hover:border-primary-500 transition-all hover:shadow-lg hover:shadow-primary-500/10 group"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex items-center gap-4">
+								<span class="text-3xl">🇵🇪</span>
+								<h3 class="text-xl font-bold text-white">
+									Peru
+								</h3>
+							</div>
+						</div>
+						<a
+							href="https://wa.me/56941861833?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20y%20servicios%20de%20America%20Play%20disponibles%20en%20Per%C3%A1."
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center justify-center gap-2 w-full bg-primary-600/20 hover:bg-primary-600 text-primary-200 hover:text-white border border-primary-500/50 py-3 rounded-lg font-semibold transition-all group-hover:shadow-md"
+						>
+							<Icon name="message-circle" class="w-5 h-5" />
+							Contactar Asesor
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -33,63 +265,131 @@ import Icon from '../components/Icon.astro';
 			<div class="grid lg:grid-cols-2 gap-12">
 				<!-- Contact Information -->
 				<div>
-					<h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+					<h2 class="text-3xl font-bold text-white mb-6">
 						Información de Contacto
 					</h2>
+					<p class="text-white/70 text-lg mb-12 leading-relaxed">
+						Estamos aquí para ayudarte. Elige el canal de
+						comunicación que prefieras y te responderemos a la
+						brevedad.
+					</p>
 
 					<div class="space-y-6 mb-12">
 						<!-- WhatsApp -->
-						<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
-							<div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
-								<Icon name="message-circle" class="h-6 w-6 text-dark-900" />
+						<a
+							href="#distribuidores"
+							class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20"
+						>
+							<div
+								class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center"
+							>
+								<Icon
+									name="message-circle"
+									class="h-6 w-6 text-dark-900"
+								/>
 							</div>
 							<div>
-								<h3 class="text-xl font-bold text-white mb-1">WhatsApp</h3>
-								<p class="text-white/70 mb-2">Respuesta inmediata 24/7</p>
-								<p class="text-primary-400 font-semibold">+1 (234) 567-890</p>
+								<h3 class="text-xl font-bold text-white mb-1">
+									WhatsApp
+								</h3>
+								<p class="text-white/70 mb-2">
+									Respuesta inmediata 24/7
+								</p>
+								<span
+									class="inline-block bg-primary-500/20 text-primary-300 px-4 py-1 rounded-full text-sm font-semibold border border-primary-500/30"
+								>
+									Contactar
+								</span>
 							</div>
 						</a>
 
 						<!-- Email -->
-						<a href="mailto:contacto@americaplay.com" class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
-							<div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full flex items-center justify-center">
-								<Icon name="mail" class="h-6 w-6 text-dark-900" />
+						<a
+							href="mailto:contacto@americaplay.com"
+							class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20"
+						>
+							<div
+								class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full flex items-center justify-center"
+							>
+								<Icon
+									name="mail"
+									class="h-6 w-6 text-dark-900"
+								/>
 							</div>
 							<div>
-								<h3 class="text-xl font-bold text-white mb-1">Email</h3>
-								<p class="text-white/70 mb-2">Para consultas detalladas</p>
-								<p class="text-secondary-400 font-semibold">contacto@americaplay.com</p>
+								<h3 class="text-xl font-bold text-white mb-1">
+									Email
+								</h3>
+								<p class="text-white/70 mb-2">
+									Para consultas detalladas
+								</p>
+								<p class="text-secondary-400 font-semibold">
+									contacto@americaplay.com
+								</p>
 							</div>
 						</a>
 
 						<!-- Phone -->
-						<a href="tel:+1234567890" class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20">
-							<div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center">
-								<Icon name="phone" class="h-6 w-6 text-dark-900" />
+						<a
+							href="#distribuidores"
+							class="flex items-start gap-4 bg-dark-800/60 border border-primary-500/20 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/20"
+						>
+							<div
+								class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center"
+							>
+								<Icon
+									name="phone"
+									class="h-6 w-6 text-dark-900"
+								/>
 							</div>
 							<div>
-								<h3 class="text-xl font-bold text-white mb-1">Teléfono</h3>
-								<p class="text-white/70 mb-2">Llamadas directas</p>
-								<p class="text-accent-400 font-semibold">+1 (234) 567-890</p>
+								<h3 class="text-xl font-bold text-white mb-1">
+									Teléfono
+								</h3>
+								<p class="text-white/70 mb-2">
+									Llamadas directas
+								</p>
+								<span
+									class="inline-block bg-accent-500/20 text-accent-300 px-4 py-1 rounded-full text-sm font-semibold border border-accent-500/30"
+								>
+									Contactar
+								</span>
 							</div>
 						</a>
 					</div>
 
 					<!-- Additional Info -->
-					<div class="bg-blue-900/30 border border-primary-500/20 rounded-xl p-6">
+					<div
+						class="bg-blue-900/30 border border-primary-500/20 rounded-xl p-6"
+					>
 						<div class="flex items-start gap-4 mb-4">
-							<Icon name="clock" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-1" />
+							<Icon
+								name="clock"
+								class="h-6 w-6 text-primary-400 flex-shrink-0 mt-1"
+							/>
 							<div>
-								<h4 class="text-lg font-bold text-white mb-1">Horario de Atención</h4>
-								<p class="text-white/70">Disponibles 24 horas, 7 días a la semana</p>
+								<h4 class="text-lg font-bold text-white mb-1">
+									Horario de Atención
+								</h4>
+								<p class="text-white/70">
+									Disponibles 24 horas, 7 días a la semana
+								</p>
 							</div>
 						</div>
 
 						<div class="flex items-start gap-4">
-							<Icon name="map-pin" class="h-6 w-6 text-primary-400 flex-shrink-0 mt-1" />
+							<Icon
+								name="map-pin"
+								class="h-6 w-6 text-primary-400 flex-shrink-0 mt-1"
+							/>
 							<div>
-								<h4 class="text-lg font-bold text-white mb-1">Ubicación</h4>
-								<p class="text-white/70">Servicio internacional. Atendemos clientes en todo el mundo.</p>
+								<h4 class="text-lg font-bold text-white mb-1">
+									Ubicación
+								</h4>
+								<p class="text-white/70">
+									Servicio internacional. Atendemos clientes
+									en todo el mundo.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -97,14 +397,23 @@ import Icon from '../components/Icon.astro';
 
 				<!-- Contact Form -->
 				<div>
-					<h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+					<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
 						Envíanos un Mensaje
 					</h2>
+					<p class="text-white/70 text-lg mb-8 leading-relaxed">
+						Completa el siguiente formulario con tus datos y
+						consultas. Nuestro equipo analizará tu requerimiento
+						para brindarte una respuesta personalizada a la
+						brevedad.
+					</p>
 
 					<form class="space-y-6" action="#" method="POST">
 						<!-- Name -->
 						<div>
-							<label for="name" class="block text-sm font-medium text-white/90 mb-2">
+							<label
+								for="name"
+								class="block text-sm font-medium text-white/90 mb-2"
+							>
 								Nombre Completo
 							</label>
 							<input
@@ -119,7 +428,10 @@ import Icon from '../components/Icon.astro';
 
 						<!-- Email -->
 						<div>
-							<label for="email" class="block text-sm font-medium text-white/90 mb-2">
+							<label
+								for="email"
+								class="block text-sm font-medium text-white/90 mb-2"
+							>
 								Email
 							</label>
 							<input
@@ -134,7 +446,10 @@ import Icon from '../components/Icon.astro';
 
 						<!-- Phone -->
 						<div>
-							<label for="phone" class="block text-sm font-medium text-white/90 mb-2">
+							<label
+								for="phone"
+								class="block text-sm font-medium text-white/90 mb-2"
+							>
 								Teléfono (Opcional)
 							</label>
 							<input
@@ -148,7 +463,10 @@ import Icon from '../components/Icon.astro';
 
 						<!-- Subject -->
 						<div>
-							<label for="subject" class="block text-sm font-medium text-white/90 mb-2">
+							<label
+								for="subject"
+								class="block text-sm font-medium text-white/90 mb-2"
+							>
 								Asunto
 							</label>
 							<select
@@ -158,11 +476,19 @@ import Icon from '../components/Icon.astro';
 								class="w-full px-4 py-3 bg-dark-800/60 border border-primary-500/20 rounded-lg text-white focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all"
 							>
 								<option value="">Selecciona un asunto</option>
-								<option value="iptv">Plan IPTV / Prueba Gratis</option>
-								<option value="reseller">Programa de Resellers</option>
-								<option value="enterprise">Servicios Empresariales</option>
+								<option value="iptv"
+									>Plan IPTV / Prueba Gratis</option
+								>
+								<option value="reseller"
+									>Programa de Resellers</option
+								>
+								<option value="enterprise"
+									>Servicios Empresariales</option
+								>
 								<option value="ott">Plataforma OTT/IPTV</option>
-								<option value="development">Desarrollo Web/Móvil</option>
+								<option value="development"
+									>Desarrollo Web/Móvil</option
+								>
 								<option value="support">Soporte Técnico</option>
 								<option value="other">Otro</option>
 							</select>
@@ -170,7 +496,10 @@ import Icon from '../components/Icon.astro';
 
 						<!-- Message -->
 						<div>
-							<label for="message" class="block text-sm font-medium text-white/90 mb-2">
+							<label
+								for="message"
+								class="block text-sm font-medium text-white/90 mb-2"
+							>
 								Mensaje
 							</label>
 							<textarea
@@ -214,63 +543,88 @@ import Icon from '../components/Icon.astro';
 			</div>
 
 			<div class="space-y-6">
-				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
-					<h3 class="text-xl font-bold text-white mb-3">¿Cómo puedo probar el servicio IPTV?</h3>
+				<div
+					class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6"
+				>
+					<h3 class="text-xl font-bold text-white mb-3">
+						¿Cómo puedo probar el servicio IPTV?
+					</h3>
 					<p class="text-white/70 leading-relaxed">
-						Contáctanos por WhatsApp o el formulario y te proporcionaremos una prueba gratuita de 24 horas. No requiere tarjeta de crédito ni compromiso.
+						Contáctanos por WhatsApp o el formulario y te
+						proporcionaremos una prueba gratuita de 24 horas. No
+						requiere tarjeta de crédito ni compromiso.
 					</p>
 				</div>
 
-				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
-					<h3 class="text-xl font-bold text-white mb-3">¿Cuánto demora una cotización de servicios empresariales?</h3>
+				<div
+					class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6"
+				>
+					<h3 class="text-xl font-bold text-white mb-3">
+						¿Cuánto demora una cotización de servicios
+						empresariales?
+					</h3>
 					<p class="text-white/70 leading-relaxed">
-						Generalmente respondemos dentro de las primeras 24 horas. Para proyectos complejos, podemos agendar una videollamada para entender mejor tus necesidades.
+						Generalmente respondemos dentro de las primeras 24
+						horas. Para proyectos complejos, podemos agendar una
+						videollamada para entender mejor tus necesidades.
 					</p>
 				</div>
 
-				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
-					<h3 class="text-xl font-bold text-white mb-3">¿Ofrecen soporte técnico post-venta?</h3>
+				<div
+					class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6"
+				>
+					<h3 class="text-xl font-bold text-white mb-3">
+						¿Ofrecen soporte técnico post-venta?
+					</h3>
 					<p class="text-white/70 leading-relaxed">
-						Sí, todos nuestros planes y servicios incluyen soporte técnico. Para clientes IPTV es 24/7, y para servicios empresariales ofrecemos contratos de mantenimiento personalizados.
+						Sí, todos nuestros planes y servicios incluyen soporte
+						técnico. Para clientes IPTV es 24/7, y para servicios
+						empresariales ofrecemos contratos de mantenimiento
+						personalizados.
 					</p>
 				</div>
 
-				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
-					<h3 class="text-xl font-bold text-white mb-3">¿Trabajan con clientes internacionales?</h3>
+				<div
+					class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6"
+				>
+					<h3 class="text-xl font-bold text-white mb-3">
+						¿Trabajan con clientes internacionales?
+					</h3>
 					<p class="text-white/70 leading-relaxed">
-						Absolutamente. Tenemos clientes en múltiples países y estamos equipados para trabajar en diferentes zonas horarias y modalidades de pago internacional.
+						Absolutamente. Tenemos clientes en múltiples países y
+						estamos equipados para trabajar en diferentes zonas
+						horarias y modalidades de pago internacional.
 					</p>
 				</div>
 
-				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
-					<h3 class="text-xl font-bold text-white mb-3">¿Qué métodos de pago aceptan?</h3>
+				<div
+					class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6"
+				>
+					<h3 class="text-xl font-bold text-white mb-3">
+						¿Qué métodos de pago aceptan?
+					</h3>
 					<p class="text-white/70 leading-relaxed">
-						Para planes IPTV: transferencias bancarias, PayPal, criptomonedas y más. Para proyectos empresariales: transferencias, cheques y pagos programados según contrato.
+						Para planes IPTV: transferencias bancarias, PayPal,
+						criptomonedas y más. Para proyectos empresariales:
+						transferencias, cheques y pagos programados según
+						contrato.
 					</p>
 				</div>
 
-				<div class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6">
-					<h3 class="text-xl font-bold text-white mb-3">¿Cómo empiezo con un proyecto de desarrollo?</h3>
+				<div
+					class="bg-dark-800/60 border border-primary-500/20 rounded-xl p-6"
+				>
+					<h3 class="text-xl font-bold text-white mb-3">
+						¿Cómo empiezo con un proyecto de desarrollo?
+					</h3>
 					<p class="text-white/70 leading-relaxed">
-						Primero agendamos una reunión de descubrimiento (presencial o virtual), luego preparamos una propuesta técnica con cotización. Si aceptas, comenzamos el desarrollo en sprints ágiles con entregas parciales.
+						Primero agendamos una reunión de descubrimiento
+						(presencial o virtual), luego preparamos una propuesta
+						técnica con cotización. Si aceptas, comenzamos el
+						desarrollo en sprints ágiles con entregas parciales.
 					</p>
 				</div>
 			</div>
-		</div>
-	</section>
-
-	<!-- Quick CTA -->
-	<section class="py-16 bg-gradient-to-r from-secondary-400/20 to-secondary-400/10 border-y-2 border-secondary-400/30">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h3 class="text-3xl font-bold text-secondary-400 mb-4">
-				¿Prefieres Hablar Directamente?
-			</h3>
-			<p class="text-xl text-white/80 mb-8">
-				Estamos disponibles en WhatsApp para responder tus preguntas al instante
-			</p>
-			<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-dark-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-primary-500/50 hover:-translate-y-1 inline-block">
-				Abrir WhatsApp
-			</a>
 		</div>
 	</section>
 </MainLayout>

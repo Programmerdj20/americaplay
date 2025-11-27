@@ -1,16 +1,19 @@
 ---
-import Icon from './Icon.astro';
+import Icon from "./Icon.astro";
 ---
 
-<footer class="bg-dark-900 border-t border-primary-500/10 mt-20">
+<footer class="bg-dark-900 border-t border-primary-500/10">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 		<!-- Main Footer Content -->
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
 			<!-- Company Info -->
 			<div>
-				<h4 class="text-secondary-400 font-bold text-lg mb-4">AmericaPlay</h4>
+				<h4 class="text-secondary-400 font-bold text-lg mb-4">
+					AmericaPlay
+				</h4>
 				<p class="text-white/70 text-sm leading-relaxed mb-4">
-					Creamos plataformas tecnológicas OTT/IPTV y ofrecemos servicios premium de streaming.
+					Creamos plataformas tecnológicas OTT/IPTV y ofrecemos
+					servicios premium de streaming.
 				</p>
 				<p class="text-primary-300 text-sm font-semibold">
 					Tu socio tecnológico de confianza
@@ -19,7 +22,9 @@ import Icon from './Icon.astro';
 
 			<!-- Para Empresas -->
 			<div>
-				<h4 class="text-secondary-400 font-bold text-lg mb-4">Para Empresas</h4>
+				<h4 class="text-secondary-400 font-bold text-lg mb-4">
+					Para Empresas
+				</h4>
 				<ul class="space-y-2">
 					<li>
 						<a href="/servicios#ott" class="footer-link">
@@ -46,12 +51,12 @@ import Icon from './Icon.astro';
 
 			<!-- Para Usuarios -->
 			<div>
-				<h4 class="text-secondary-400 font-bold text-lg mb-4">Para Usuarios</h4>
+				<h4 class="text-secondary-400 font-bold text-lg mb-4">
+					Para Usuarios
+				</h4>
 				<ul class="space-y-2">
 					<li>
-						<a href="/planes" class="footer-link">
-							Planes IPTV
-						</a>
+						<a href="/planes" class="footer-link"> Planes IPTV </a>
 					</li>
 					<li>
 						<a href="/reseller" class="footer-link">
@@ -73,24 +78,44 @@ import Icon from './Icon.astro';
 
 			<!-- Contacto -->
 			<div>
-				<h4 class="text-secondary-400 font-bold text-lg mb-4">Contacto</h4>
+				<h4 class="text-secondary-400 font-bold text-lg mb-4">
+					Contacto
+				</h4>
 				<ul class="space-y-3">
 					<li>
-						<a href="mailto:contacto@americaplay.com" class="footer-link-contact">
-							<Icon name="mail" class="h-5 w-5 text-primary-400" />
+						<a
+							href="mailto:contacto@americaplay.com"
+							class="footer-link-contact"
+						>
+							<Icon
+								name="mail"
+								class="h-5 w-5 text-primary-400"
+							/>
 							<span>contacto@americaplay.com</span>
 						</a>
 					</li>
 					<li>
-						<a href="tel:+1234567890" class="footer-link-contact">
-							<Icon name="phone" class="h-5 w-5 text-primary-400" />
-							<span>+1 (234) 567-890</span>
+						<a
+							href="/contacto#distribuidores"
+							class="footer-link-contact"
+						>
+							<Icon
+								name="phone"
+								class="h-5 w-5 text-primary-400"
+							/>
+							<span>Contactar</span>
 						</a>
 					</li>
 					<li>
-						<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="footer-link-contact">
-							<Icon name="message-circle" class="h-5 w-5 text-primary-400" />
-							<span>WhatsApp: +1 234 567 890</span>
+						<a
+							href="/contacto#distribuidores"
+							class="footer-link-contact"
+						>
+							<Icon
+								name="message-circle"
+								class="h-5 w-5 text-primary-400"
+							/>
+							<span>Contactar</span>
 						</a>
 					</li>
 				</ul>
@@ -104,16 +129,25 @@ import Icon from './Icon.astro';
 		<div class="border-t border-primary-500/10 my-8"></div>
 
 		<!-- Bottom Footer -->
-		<div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+		<div
+			class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+		>
 			<p class="text-white/60 text-sm">
-				&copy; {new Date().getFullYear()} AmericaPlay. Todos los derechos reservados.
+				&copy; {new Date().getFullYear()} AmericaPlay. Todos los derechos
+				reservados.
 			</p>
 
 			<div class="flex space-x-6">
-				<a href="/terminos" class="text-white/60 hover:text-primary-300 text-sm transition">
+				<a
+					href="/terminos"
+					class="text-white/60 hover:text-primary-300 text-sm transition"
+				>
 					Términos de Servicio
 				</a>
-				<a href="/privacidad" class="text-white/60 hover:text-primary-300 text-sm transition">
+				<a
+					href="/privacidad"
+					class="text-white/60 hover:text-primary-300 text-sm transition"
+				>
 					Política de Privacidad
 				</a>
 			</div>

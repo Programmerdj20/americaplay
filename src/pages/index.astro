@@ -1,10 +1,10 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import OptimizedImage from '../components/OptimizedImage.astro';
-import HeroImage from '../components/HeroImage.astro';
-import PricingCard from '../components/pricing/PricingCard.astro';
-import FeatureBox from '../components/ui/FeatureBox.astro';
-import Icon from '../components/Icon.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import OptimizedImage from "../components/OptimizedImage.astro";
+import HeroImage from "../components/HeroImage.astro";
+import PricingCard from "../components/pricing/PricingCard.astro";
+import FeatureBox from "../components/ui/FeatureBox.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <MainLayout
@@ -21,25 +21,40 @@ import Icon from '../components/Icon.astro';
 	>
 		<section class="relative w-full pt-20">
 			<!-- Hexagon Pattern Overlay -->
-			<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"></div>
+			<div
+				class="absolute inset-0 opacity-10 pointer-events-none"
+				style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0L93.3 25L93.3 75L50 100L6.7 75L6.7 25Z\' fill=\'none\' stroke=\'%2300d9ff\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-size: 200px;"
+			>
+			</div>
 
-			<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+			<div
+				class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+			>
 				<div class="grid lg:grid-cols-2 gap-12 items-center">
 					<!-- Hero Text -->
 					<div class="text-center lg:text-left">
-						<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
-							<span class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+						<h1
+							class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight"
+						>
+							<span
+								class="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent"
+							>
 								Televisión Entretenida
 							</span>
 							<br />
 							<span class="text-secondary-400">Sin Límites</span>
 						</h1>
 
-						<p class="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed">
-							Más de 1000 canales, películas, series y deportes en vivo. Calidad HD/4K desde cualquier dispositivo.
+						<p
+							class="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed"
+						>
+							Más de 1000 canales, películas, series y deportes en
+							vivo. Calidad HD/4K desde cualquier dispositivo.
 						</p>
 
-						<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+						<div
+							class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+						>
 							<a href="#planes" class="btn-primary">
 								Ver Planes
 							</a>
@@ -49,14 +64,15 @@ import Icon from '../components/Icon.astro';
 						</div>
 
 						<p class="mt-6 text-primary-300 text-sm">
-							Precio de lanzamiento desde <span class="font-bold text-secondary-400 text-lg">$9.99/mes</span>
+							Precio de lanzamiento desde <span
+								class="font-bold text-secondary-400 text-lg"
+								>$7/mes</span
+							>
 						</p>
 					</div>
 
 					<!-- Espacio vacío donde estaba la imagen -->
-					<div class="hidden lg:block">
-					</div>
-
+					<div class="hidden lg:block"></div>
 				</div>
 			</div>
 		</section>
@@ -70,7 +86,8 @@ import Icon from '../components/Icon.astro';
 					¿Por Qué Elegirnos?
 				</h2>
 				<p class="text-xl text-white/70 max-w-2xl mx-auto">
-					No solo ofrecemos streaming, creamos experiencias de entretenimiento inolvidables
+					No solo ofrecemos streaming, creamos experiencias de
+					entretenimiento inolvidables
 				</p>
 			</div>
 
@@ -79,49 +96,78 @@ import Icon from '../components/Icon.astro';
 					<div class="value-icon">
 						<Icon name="zap" class="h-10 w-10 text-dark-900" />
 					</div>
-					<h3 class="text-xl font-bold text-white mb-3">Experiencia Comprobada</h3>
-					<p class="text-white/70">Años especializados en streaming IPTV de alto rendimiento y calidad superior</p>
+					<h3 class="text-xl font-bold text-white mb-3">
+						Experiencia Comprobada
+					</h3>
+					<p class="text-white/70">
+						Años especializados en streaming IPTV de alto
+						rendimiento y calidad superior
+					</p>
 				</div>
 
 				<div class="value-card">
 					<div class="value-icon">
 						<Icon name="sparkles" class="h-10 w-10 text-dark-900" />
 					</div>
-					<h3 class="text-xl font-bold text-white mb-3">Interfaz Excepcional</h3>
-					<p class="text-white/70">Plataforma intuitiva que tus usuarios amarán desde el primer momento</p>
+					<h3 class="text-xl font-bold text-white mb-3">
+						Interfaz Excepcional
+					</h3>
+					<p class="text-white/70">
+						Plataforma intuitiva que tus usuarios amarán desde el
+						primer momento
+					</p>
 				</div>
 
 				<div class="value-card">
 					<div class="value-icon">
 						<Icon name="wrench" class="h-10 w-10 text-dark-900" />
 					</div>
-					<h3 class="text-xl font-bold text-white mb-3">Soporte 24/7</h3>
-					<p class="text-white/70">Estamos contigo en cada paso, antes, durante y después de tu suscripción</p>
+					<h3 class="text-xl font-bold text-white mb-3">
+						Soporte 24/7
+					</h3>
+					<p class="text-white/70">
+						Estamos contigo en cada paso, antes, durante y después
+						de tu suscripción
+					</p>
 				</div>
 
 				<div class="value-card">
 					<div class="value-icon">
 						<Icon name="palette" class="h-10 w-10 text-dark-900" />
 					</div>
-					<h3 class="text-xl font-bold text-white mb-3">Tecnología de Punta</h3>
-					<p class="text-white/70">Usamos las últimas tecnologías para garantizar calidad y rendimiento</p>
+					<h3 class="text-xl font-bold text-white mb-3">
+						Tecnología de Punta
+					</h3>
+					<p class="text-white/70">
+						Usamos las últimas tecnologías para garantizar calidad y
+						rendimiento
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Planes IPTV -->
-	<section id="planes" class="py-20 bg-gradient-to-br from-dark-900 to-dark-800 relative overflow-hidden">
+	<section
+		id="planes"
+		class="py-20 bg-gradient-to-br from-dark-900 to-dark-800 relative overflow-hidden"
+	>
 		<!-- Gradient Overlay -->
-		<div class="absolute inset-0 bg-gradient-to-b from-primary-500/5 to-transparent pointer-events-none"></div>
+		<div
+			class="absolute inset-0 bg-gradient-to-b from-primary-500/5 to-transparent pointer-events-none"
+		>
+		</div>
 
 		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-16">
 				<h2 class="text-4xl md:text-5xl font-bold mb-4">
-					<span class="text-secondary-400">America</span><span class="text-white">Play</span> IPTV Premium
+					<span class="text-secondary-400">America</span><span
+						class="text-white">Play</span
+					> IPTV Premium
 				</h2>
 				<p class="text-xl text-white/70 max-w-2xl mx-auto">
-					Más de 1000 canales, películas, series y deportes en vivo. Elige el plan perfecto para ti.
+					Más de 1000 canales, películas, series y deportes en vivo.
+					Elige el plan perfecto para ti.
 				</p>
 			</div>
 
@@ -133,12 +179,12 @@ import Icon from '../components/Icon.astro';
 					period="por mes"
 					devices="3 dispositivos simultáneos"
 					features={[
-						'+1000 canales en vivo',
-						'+90 canales deportivos',
-						'Películas, series y animes',
-						'Zona Kids protegida',
-						'Calidad HD/4K',
-						'Contenido adultos +18'
+						"+1000 canales en vivo",
+						"+90 canales deportivos",
+						"Películas, series y animes",
+						"Zona Kids protegida",
+						"Calidad HD/4K",
+						"Contenido adultos +18",
 					]}
 				/>
 
@@ -149,12 +195,12 @@ import Icon from '../components/Icon.astro';
 					period="por 3 meses"
 					devices="3 dispositivos simultáneos"
 					features={[
-						'+1000 canales en vivo',
-						'+90 canales deportivos',
-						'Películas, series y animes',
-						'Zona Kids protegida',
-						'Calidad HD/4K',
-						'Contenido adultos +18'
+						"+1000 canales en vivo",
+						"+90 canales deportivos",
+						"Películas, series y animes",
+						"Zona Kids protegida",
+						"Calidad HD/4K",
+						"Contenido adultos +18",
 					]}
 				/>
 
@@ -166,13 +212,13 @@ import Icon from '../components/Icon.astro';
 					devices="5 dispositivos simultáneos"
 					popular={true}
 					features={[
-						'+1000 canales en vivo',
-						'+90 canales deportivos',
-						'Películas, series y animes',
-						'Zona Kids protegida',
-						'Calidad HD/4K',
-						'Contenido adultos +18',
-						'Soporte prioritario 24/7'
+						"+1000 canales en vivo",
+						"+90 canales deportivos",
+						"Películas, series y animes",
+						"Zona Kids protegida",
+						"Calidad HD/4K",
+						"Contenido adultos +18",
+						"Soporte prioritario 24/7",
 					]}
 				/>
 
@@ -183,12 +229,12 @@ import Icon from '../components/Icon.astro';
 					period="por 6 meses"
 					devices="3 dispositivos simultáneos"
 					features={[
-						'+1000 canales en vivo',
-						'+90 canales deportivos',
-						'Películas, series y animes',
-						'Zona Kids protegida',
-						'Calidad HD/4K',
-						'Contenido adultos +18'
+						"+1000 canales en vivo",
+						"+90 canales deportivos",
+						"Películas, series y animes",
+						"Zona Kids protegida",
+						"Calidad HD/4K",
+						"Contenido adultos +18",
 					]}
 				/>
 			</div>
@@ -248,40 +294,52 @@ import Icon from '../components/Icon.astro';
 	</section>
 
 	<!-- Reseller CTA -->
-	<section class="py-16 bg-gradient-to-r from-secondary-400/20 to-secondary-400/10 border-y-2 border-secondary-400/30">
+	<section
+		class="py-16 bg-gradient-to-r from-secondary-400/20 to-secondary-400/10 border-y-2 border-secondary-400/30"
+	>
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 			<h3 class="text-3xl font-bold text-secondary-400 mb-4">
 				Únete a Nuestro Programa de Resellers
 			</h3>
 			<p class="text-xl text-white/80 mb-8">
-				Maximiza tus ganancias revendiendo nuestros servicios premium. Comisiones atractivas y soporte completo.
+				Maximiza tus ganancias revendiendo nuestros servicios premium.
+				Comisiones atractivas y soporte completo.
 			</p>
-			<a href="/contacto" class="btn-primary">
-				Quiero Ser Reseller
-			</a>
+			<a href="/contacto" class="btn-primary"> Quiero Ser Reseller </a>
 		</div>
 	</section>
 
 	<!-- CTA Final -->
-	<section class="py-20 bg-gradient-to-br from-dark-900 to-blue-900 relative overflow-hidden">
-		<div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.2) 0%, transparent 70%);"></div>
+	<section
+		class="py-20 bg-gradient-to-br from-dark-900 to-blue-900 relative overflow-hidden"
+	>
+		<div
+			class="absolute inset-0 opacity-10"
+			style="background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.2) 0%, transparent 70%);"
+		>
+		</div>
 
-		<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+		<div
+			class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+		>
 			<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
 				¿Listo Para Comenzar?
 			</h2>
 			<p class="text-xl text-white/80 mb-8">
-				Únete a miles de usuarios satisfechos y disfruta del mejor streaming IPTV
+				Únete a miles de usuarios satisfechos y disfruta del mejor
+				streaming IPTV
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="/contacto" class="btn-primary">
-					Contactar Ahora
-				</a>
-				<a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+				<a href="/contacto" class="btn-primary"> Contactar Ahora </a>
+				<a
+					href="https://wa.me/1234567890"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-secondary"
+				>
 					WhatsApp
 				</a>
 			</div>
 		</div>
 	</section>
 </MainLayout>
-
