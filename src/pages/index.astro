@@ -171,11 +171,42 @@ import Icon from "../components/Icon.astro";
 				</p>
 			</div>
 
-			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+			<!-- Toggle Switch -->
+			<div class="flex justify-center mb-12">
+				<div
+					class="bg-dark-900/50 p-1 rounded-full border border-primary-500/30 inline-flex relative"
+				>
+					<div
+						id="toggle-bg"
+						class="absolute top-1 left-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-primary-600 rounded-full transition-all duration-300 ease-in-out"
+					>
+					</div>
+					<button
+						id="btn-3-devices"
+						class="relative z-10 px-6 py-2 rounded-full text-white font-bold transition-colors duration-300"
+						onclick="switchPricing('3')"
+					>
+						3 Dispositivos
+					</button>
+					<button
+						id="btn-5-devices"
+						class="relative z-10 px-6 py-2 rounded-full text-white/70 font-bold transition-colors duration-300 hover:text-white"
+						onclick="switchPricing('5')"
+					>
+						5 Dispositivos
+					</button>
+				</div>
+			</div>
+
+			<!-- 3 Devices Grid -->
+			<div
+				id="pricing-3-devices"
+				class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500 opacity-100"
+			>
 				<PricingCard
 					name="Plan Mensual"
-					duration="Facturación mensual"
-					price="9.99"
+					duration="1 Mes"
+					price="7"
 					period="por mes"
 					devices="3 dispositivos simultáneos"
 					features={[
@@ -189,27 +220,11 @@ import Icon from "../components/Icon.astro";
 				/>
 
 				<PricingCard
-					name="Plan 3 Meses"
-					duration="Ahorra 15%"
-					price="25.99"
-					period="por 3 meses"
+					name="Plan 4 Meses"
+					duration="3 + 1 Meses Gratis"
+					price="15"
+					period="por 4 meses"
 					devices="3 dispositivos simultáneos"
-					features={[
-						"+1000 canales en vivo",
-						"+90 canales deportivos",
-						"Películas, series y animes",
-						"Zona Kids protegida",
-						"Calidad HD/4K",
-						"Contenido adultos +18",
-					]}
-				/>
-
-				<PricingCard
-					name="Plan Anual"
-					duration="Ahorra 40% - Mejor valor"
-					price="79.99"
-					period="por año completo"
-					devices="5 dispositivos simultáneos"
 					popular={true}
 					features={[
 						"+1000 canales en vivo",
@@ -218,15 +233,14 @@ import Icon from "../components/Icon.astro";
 						"Zona Kids protegida",
 						"Calidad HD/4K",
 						"Contenido adultos +18",
-						"Soporte prioritario 24/7",
 					]}
 				/>
 
 				<PricingCard
-					name="Plan 6 Meses"
-					duration="Ahorra 25%"
-					price="49.99"
-					period="por 6 meses"
+					name="Plan 8 Meses"
+					duration="6 + 2 Meses Gratis"
+					price="25"
+					period="por 8 meses"
 					devices="3 dispositivos simultáneos"
 					features={[
 						"+1000 canales en vivo",
@@ -238,8 +252,123 @@ import Icon from "../components/Icon.astro";
 					]}
 				/>
 			</div>
+
+			<!-- 5 Devices Grid -->
+			<div
+				id="pricing-5-devices"
+				class="hidden grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500 opacity-0 transform translate-y-4"
+			>
+				<PricingCard
+					name="Plan 15 Meses"
+					duration="12 + 3 Meses Gratis"
+					price="45"
+					period="por 15 meses"
+					devices="5 dispositivos simultáneos"
+					features={[
+						"+1000 canales en vivo",
+						"+90 canales deportivos",
+						"Películas, series y animes",
+						"Zona Kids protegida",
+						"Calidad HD/4K",
+						"Contenido adultos +18",
+					]}
+				/>
+
+				<PricingCard
+					name="Plan 30 Meses"
+					duration="24 + 6 Meses Gratis"
+					price="75"
+					period="por 30 meses"
+					devices="5 dispositivos simultáneos"
+					popular={true}
+					features={[
+						"+1000 canales en vivo",
+						"+90 canales deportivos",
+						"Películas, series y animes",
+						"Zona Kids protegida",
+						"Calidad HD/4K",
+						"Contenido adultos +18",
+					]}
+				/>
+
+				<PricingCard
+					name="Plan Perpetuo"
+					duration="Acceso Vitalicio"
+					price="99"
+					period="pago único"
+					devices="5 dispositivos simultáneos"
+					highlight="Mejor Inversión"
+					features={[
+						"Acceso de por vida",
+						"Sin pagos mensuales",
+						"+1000 canales en vivo",
+						"Películas, series y animes",
+						"Calidad HD/4K",
+						"Soporte Prioritario VIP",
+					]}
+				/>
+			</div>
 		</div>
 	</section>
+
+	<script is:inline>
+		function switchPricing(devices) {
+			const btn3 = document.getElementById("btn-3-devices");
+			const btn5 = document.getElementById("btn-5-devices");
+			const bg = document.getElementById("toggle-bg");
+			const grid3 = document.getElementById("pricing-3-devices");
+			const grid5 = document.getElementById("pricing-5-devices");
+
+			if (devices === "3") {
+				// Update buttons
+				btn3.classList.remove("text-white/70");
+				btn3.classList.add("text-white");
+				btn5.classList.remove("text-white");
+				btn5.classList.add("text-white/70");
+
+				// Move background
+				bg.style.transform = "translateX(0)";
+
+				// Show grid 3
+				grid3.classList.remove("hidden");
+				// Small delay to allow display:block to apply before opacity transition
+				setTimeout(() => {
+					grid3.classList.remove("opacity-0", "translate-y-4");
+					grid3.classList.add("opacity-100", "translate-y-0");
+				}, 10);
+
+				// Hide grid 5
+				grid5.classList.remove("opacity-100", "translate-y-0");
+				grid5.classList.add("opacity-0", "translate-y-4");
+				setTimeout(() => {
+					grid5.classList.add("hidden");
+				}, 300);
+			} else {
+				// Update buttons
+				btn5.classList.remove("text-white/70");
+				btn5.classList.add("text-white");
+				btn3.classList.remove("text-white");
+				btn3.classList.add("text-white/70");
+
+				// Move background
+				bg.style.transform = "translateX(100%)";
+
+				// Show grid 5
+				grid5.classList.remove("hidden");
+				setTimeout(() => {
+					grid5.classList.remove("opacity-0", "translate-y-4");
+					grid5.classList.add("opacity-100", "translate-y-0");
+				}, 10);
+
+				// Hide grid 3
+				grid3.classList.remove("opacity-100", "translate-y-0");
+				grid3.classList.add("opacity-0", "translate-y-4");
+				setTimeout(() => {
+					grid3.classList.add("hidden");
+				}, 300);
+			}
+		}
+	</script>
 
 	<!-- Qué Incluye -->
 	<section class="py-20 bg-blue-900/30">
@@ -305,7 +434,9 @@ import Icon from "../components/Icon.astro";
 				Maximiza tus ganancias revendiendo nuestros servicios premium.
 				Comisiones atractivas y soporte completo.
 			</p>
-			<a href="/contacto" class="btn-primary"> Quiero Ser Reseller </a>
+			<a href="/reseller#planes" class="btn-primary">
+				Quiero Ser Reseller
+			</a>
 		</div>
 	</section>
 
@@ -331,14 +462,7 @@ import Icon from "../components/Icon.astro";
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<a href="/contacto" class="btn-primary"> Contactar Ahora </a>
-				<a
-					href="https://wa.me/1234567890"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="btn-secondary"
-				>
-					WhatsApp
-				</a>
+				<a href="/contacto" class="btn-secondary"> WhatsApp </a>
 			</div>
 		</div>
 	</section>

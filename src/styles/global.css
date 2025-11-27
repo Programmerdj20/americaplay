@@ -266,9 +266,12 @@ html {
 
 /* Smooth floating animation for hero banner */
 @keyframes hero-float {
-	0%, 100% {
+
+	0%,
+	100% {
 		transform: translateY(0px);
 	}
+
 	50% {
 		transform: translateY(-10px);
 	}
@@ -413,14 +416,20 @@ html {
 
 .popular-badge {
 	position: absolute;
-	top: 1.25rem;
-	right: 1.25rem;
-	background-color: var(--color-secondary-400);
+	top: 1.5rem;
+	left: -3.5rem;
+	width: 12rem;
+	text-align: center;
+	transform: rotate(-45deg);
+	background: var(--color-secondary-400);
 	color: var(--color-dark-900);
-	padding: 0.25rem 0.75rem;
-	border-radius: 9999px;
+	padding: 0.5rem 0;
 	font-size: 0.75rem;
-	font-weight: 700;
+	font-weight: 800;
+	z-index: 10;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
 
 .pricing-header {
