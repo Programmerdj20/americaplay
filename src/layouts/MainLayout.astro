@@ -1,7 +1,7 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -10,7 +10,7 @@ interface Props {
 
 const {
 	title,
-	description = 'AmericaPlay - Plataforma tecnológica para streaming OTT/IPTV y servicios premium para empresas y usuarios'
+	description = "AmericaPlay - Plataforma tecnológica para streaming OTT/IPTV y servicios premium para empresas y usuarios",
 } = Astro.props;
 ---
 
@@ -20,11 +20,14 @@ const {
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/webp" href="/images/Logo_redondo.webp" />
 		<meta name="generator" content={Astro.generator} />
 
 		<!-- SEO -->
-		<meta name="keywords" content="OTT, IPTV, streaming, plataforma streaming, desarrollo web, aplicaciones móviles" />
+		<meta
+			name="keywords"
+			content="OTT, IPTV, streaming, plataforma streaming, desarrollo web, aplicaciones móviles"
+		/>
 		<meta name="author" content="AmericaPlay" />
 
 		<!-- Open Graph -->
@@ -52,8 +55,8 @@ const {
 		<!-- Optimized Scripts -->
 		<script>
 			// Navbar scroll effect with throttle using requestAnimationFrame
-			(function() {
-				const nav = document.querySelector('nav');
+			(function () {
+				const nav = document.querySelector("nav");
 				if (!nav) return;
 
 				let ticking = false;
@@ -61,9 +64,9 @@ const {
 
 				function updateNavbar() {
 					if (lastScrollY > 50) {
-						nav.classList.add('nav-scrolled');
+						nav.classList.add("nav-scrolled");
 					} else {
-						nav.classList.remove('nav-scrolled');
+						nav.classList.remove("nav-scrolled");
 					}
 					ticking = false;
 				}
@@ -76,11 +79,11 @@ const {
 					}
 				}
 
-				window.addEventListener('scroll', onScroll, { passive: true });
+				window.addEventListener("scroll", onScroll, { passive: true });
 
 				// Initial check
 				if (lastScrollY > 50) {
-					nav.classList.add('nav-scrolled');
+					nav.classList.add("nav-scrolled");
 				}
 			})();
 		</script>
